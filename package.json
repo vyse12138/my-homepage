@@ -7,6 +7,9 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/material": "^5.1.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "three": "^0.134.0"
