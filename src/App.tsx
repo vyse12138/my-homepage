@@ -1,62 +1,48 @@
-import './App.css'
 import React from 'react'
 
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
-import LightMode from '@mui/icons-material/LightMode'
-import DarkMode from '@mui/icons-material/DarkMode'
-import { Box, IconButton } from '@mui/material'
+import { Box } from '@mui/material'
+import Navigation from './components/Navigation'
+import { deepOrange, grey, orange } from '@mui/material/colors'
 
-const ColorModeContext = React.createContext({ toggleColorMode: () => {} })
+export const GlobalContext = React.createContext({ toggleTheme: () => {} })
 
-function App() {
-  const theme = useTheme()
-  const colorMode = React.useContext(ColorModeContext)
-
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
-        bgcolor: 'background.default',
-        color: 'text.primary',
-        height: '100vh'
-      }}
-    >
-      <IconButton onClick={colorMode.toggleColorMode}>
-        {theme.palette.mode === 'dark' ? <DarkMode /> : <LightMode />}
-      </IconButton>
-    </Box>
-  )
-}
-
-export default function ToggleColorMode() {
-  const [mode, setMode] = React.useState<'light' | 'dark'>('dark')
-  const colorMode = React.useMemo(
-    () => ({
-      toggleColorMode: () => {
-        setMode(prevMode => (prevMode === 'light' ? 'dark' : 'light'))
+export default function App() {
+  // Global theme
+  const [dark, setDark] = React.useState<boolean>(true)
+  const theme = createTheme({
+    palette: {
+      mode: dark ? 'dark' : 'light',
+      background: {
+        default: dark ? grey[900] : orange[50]
       }
-    }),
-    []
-  )
+    }
+  })
 
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode
-        }
-      }),
-    [mode]
-  )
+  // Global context
+  const globalContext = {
+    toggleTheme: () => {
+      setDark(dark => !dark)
+    }
+  }
 
   return (
-    <ColorModeContext.Provider value={colorMode}>
+    <GlobalContext.Provider value={globalContext}>
       <ThemeProvider theme={theme}>
-        <App />
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '100%',
+            alignItems: 'center',
+            bgcolor: 'background.default',
+            color: 'text.primary',
+            height: '100vh'
+          }}
+        >
+          <Navigation />
+        </Box>
       </ThemeProvider>
-    </ColorModeContext.Provider>
+    </GlobalContext.Provider>
   )
 }
