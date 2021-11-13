@@ -3,7 +3,7 @@ import React from 'react'
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
 import { Box } from '@mui/material'
 import Navigation from './components/Navigation'
-import { deepOrange, grey, orange } from '@mui/material/colors'
+import { grey, orange } from '@mui/material/colors'
 
 export const GlobalContext = React.createContext({ toggleTheme: () => {} })
 
