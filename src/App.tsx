@@ -1,10 +1,11 @@
 import React from 'react'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
 import { Box } from '@mui/material'
 import Navigation from './components/Navigation'
 import { grey, orange } from '@mui/material/colors'
 
+import Index from './pages/index'
 export const GlobalContext = React.createContext({ toggleTheme: () => {} })
 
 export default function App() {
@@ -40,7 +41,14 @@ export default function App() {
             height: '100vh'
           }}
         >
-          <Navigation />
+          <BrowserRouter>
+            <Navigation />
+            <Routes>
+              <Route path='/' element={<Index />} />
+              <Route path='/projects' element={<Index />} />
+              <Route path='/posts' element={<Index />} />
+            </Routes>
+          </BrowserRouter>
         </Box>
       </ThemeProvider>
     </GlobalContext.Provider>
