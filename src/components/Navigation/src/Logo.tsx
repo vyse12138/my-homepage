@@ -19,8 +19,8 @@ export default function Logo() {
           <img src={LogoDark} alt='logo' width='20' />
         ) : (
           <img src={LogoLight} alt='logo' width='20' />
-        )}{' '}
-        Yulei{' '}
+        )}
+        Yulei
       </Typography>
     </Box>
   )

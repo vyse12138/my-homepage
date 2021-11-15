@@ -4,7 +4,7 @@ import { useTheme } from '@mui/material/styles'
 import LightMode from '@mui/icons-material/LightMode'
 import DarkMode from '@mui/icons-material/DarkMode'
 import { Box, IconButton, Typography } from '@mui/material'
-import { grey, orange } from '@mui/material/colors'
+import { grey, orange, cyan } from '@mui/material/colors'
 import Logo from './src/Logo'
 import { NavLink } from 'react-router-dom'
 export default function Navigation() {
@@ -14,7 +14,10 @@ export default function Navigation() {
   return (
     <Box
       sx={{
-        width: '100%'
+        width: '100%',
+        position: 'sticky',
+        top: '0',
+        left: '0'
       }}
     >
       <Box
@@ -33,36 +36,67 @@ export default function Navigation() {
             flex: '',
             textDecoration: 'none',
             color: 'inherit',
-            pr: '1rem'
+            marginRight: '50px'
           }}
         >
           <Logo />
         </Box>
-        <Box
-          component={NavLink}
-          to='/projects'
-          sx={{
-            textDecoration: 'none',
-            color: 'inherit',
-            pl: '1rem'
-          }}
-        >
-          <Typography variant='h6'>Projects</Typography>
-        </Box>
-        <Box
-          component={NavLink}
-          to='/posts'
-          sx={{
-            flex: '1',
-            textDecoration: 'none',
-            color: 'inherit',
-            pl: '1rem'
-          }}
-        >
-          <Typography variant='h6'>Posts</Typography>
-        </Box>
 
-        <IconButton onClick={globalContext.toggleTheme}>
+        <NavLink
+          to='/projects'
+          style={({ isActive }) => {
+            return {
+              textDecoration: 'none',
+              color: isActive ? 'black' : 'inherit',
+              padding: '4px',
+              marginRight: '10px',
+              backgroundColor: isActive ? cyan[200] : ''
+            }
+          }}
+        >
+          <Typography
+            variant='h6'
+            sx={{
+              '&:hover': {
+                textDecoration: 'underline'
+              }
+            }}
+          >
+            Projects
+          </Typography>
+        </NavLink>
+        <NavLink
+          to='/posts'
+          style={({ isActive }) => {
+            return {
+              textDecoration: 'none',
+              color: isActive ? 'black' : 'inherit',
+              padding: '4px',
+              backgroundColor: isActive ? cyan[200] : '',
+              '&:hover': {
+                textDecoration: 'underline'
+              }
+            }
+          }}
+        >
+          <Typography
+            variant='h6'
+            sx={{
+              '&:hover': {
+                textDecoration: 'underline'
+              }
+            }}
+          >
+            Posts
+          </Typography>
+        </NavLink>
+
+        <IconButton
+          onClick={globalContext.toggleTheme}
+          sx={{
+            marginLeft: 'auto'
+          }}
+        >
           {theme.palette.mode === 'dark' ? <DarkMode /> : <LightMode />}
         </IconButton>
       </Box>
