@@ -11,7 +11,7 @@ export default function Logo() {
   return (
     <Box
       sx={{
-        fontSize: '1.5rem'
+        fontSize: '18px'
       }}
     >
       <Typography variant='h5'>

@@ -55,7 +55,6 @@ export default function Navigation() {
           }}
         >
           <Typography
-            variant='h6'
             sx={{
               '&:hover': {
                 textDecoration: 'underline'
@@ -80,7 +79,6 @@ export default function Navigation() {
           }}
         >
           <Typography
-            variant='h6'
             sx={{
               '&:hover': {
                 textDecoration: 'underline'
