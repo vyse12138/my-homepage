@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography'
 
 export default function Logo() {
   const theme = useTheme()
-  console.log(LogoDark)
   return (
     <Box
       sx={{

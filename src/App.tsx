@@ -4,7 +4,7 @@ import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
 import { Box } from '@mui/material'
 import Navigation from './components/Navigation'
 import { grey, orange } from '@mui/material/colors'
-
+import Scene from './components/Scene'
 import Index from './pages/index'
 export const GlobalContext = React.createContext({ toggleTheme: () => {} })
 
@@ -43,6 +43,7 @@ export default function App() {
         >
           <BrowserRouter>
             <Navigation />
+            <Scene />
             <Routes>
               <Route path='/' element={<Index />} />
               <Route path='/projects' element={<Index />} />
