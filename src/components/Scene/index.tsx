@@ -19,14 +19,7 @@ export default function Scene() {
       scene.add(gltf.scene)
 
       const scale = 6
-      const camera = new THREE.OrthographicCamera(
-        -scale,
-        scale,
-        scale,
-        -scale,
-        0.01,
-        50000
-      )
+      const camera = new THREE.OrthographicCamera(-9, 9, 6, -6, 0.01, 50000)
 
       camera.position.copy(
         new THREE.Vector3(
@@ -40,7 +33,7 @@ export default function Scene() {
         alpha: true
       })
       renderer.setPixelRatio(window.devicePixelRatio)
-      renderer.setSize(400, 400)
+      renderer.setSize(600, 400)
       renderer.outputEncoding = THREE.sRGBEncoding
 
       const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
@@ -49,7 +42,6 @@ export default function Scene() {
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
       controls.target = new THREE.Vector3(0, 0, 0)
-
       setIsLoading(false)
       if (container.current?.childNodes.length === 0) {
         container.current.appendChild(renderer.domElement)
