@@ -17,6 +17,9 @@ export default function App() {
       background: {
         default: dark ? grey[900] : orange[50]
       }
+    },
+    typography: {
+      fontFamily: 'ZCOOL KuaiLe'
     }
   })
 
