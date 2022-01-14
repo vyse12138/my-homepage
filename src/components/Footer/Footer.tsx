@@ -8,5 +8,5 @@ import { Box, IconButton } from '@mui/material'
 export default function Footer() {
   const globalContext = React.useContext(GlobalContext)
   const theme = useTheme()
-  return <Box sx={{}}>yulei</Box>
+  return <Box sx={{}}>Footer</Box>
 }

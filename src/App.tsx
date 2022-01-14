@@ -19,7 +19,7 @@ export default function App() {
       }
     },
     typography: {
-      fontFamily: 'ZCOOL KuaiLe'
+      fontFamily: 'Roboto, ZCOOL KuaiLe'
     }
   })
 
