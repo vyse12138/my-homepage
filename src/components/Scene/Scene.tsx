@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Box } from '@mui/material'
+import { Box, CircularProgress } from '@mui/material'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { minWidth } from '@mui/system'
 
 function easeOutCirc(x: number) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
@@ -16,6 +17,7 @@ export default function Scene() {
 
     const loader = new GLTFLoader()
     loader.load('./dog.glb', function (gltf) {
+      gltf.scene.position.y = -1.75
       scene.add(gltf.scene)
 
       const scale = 6
@@ -85,7 +87,18 @@ export default function Scene() {
   return (
     <>
       {isLoading ? (
-        <Box sx={{ minHeight: 400, minWidth: 400 }}>Loading...</Box>
+        <Box
+          sx={{
+            display: 'flex',
+            minHeight: 400,
+            minWidth: 600,
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column'
+          }}
+        >
+          <CircularProgress />
+        </Box>
       ) : (
         <Box sx={{}} ref={container}></Box>
       )}
