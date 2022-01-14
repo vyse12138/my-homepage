@@ -17,7 +17,8 @@ export default function Navigation() {
         width: '100%',
         position: 'sticky',
         top: '0',
-        left: '0'
+        left: '0',
+        backdropFilter: 'blur(10px)'
       }}
     >
       <Box

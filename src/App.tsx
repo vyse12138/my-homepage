@@ -40,8 +40,7 @@ export default function App() {
             width: '100%',
             alignItems: 'center',
             bgcolor: 'background.default',
-            color: 'text.primary',
-            height: '100vh'
+            color: 'text.primary'
           }}
         >
           <BrowserRouter>

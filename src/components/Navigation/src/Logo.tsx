@@ -1,8 +1,8 @@
 import React from 'react'
 import { useTheme } from '@mui/material/styles'
 import { Box } from '@mui/material'
-import LogoDark from '../../../static/Logos/footprint-dark.png'
-import LogoLight from '../../../static/Logos/footprint.png'
+import LogoDark from '../../../static/images/footprint-dark.png'
+import LogoLight from '../../../static/images/footprint.png'
 import Typography from '@mui/material/Typography'
 
 export default function Logo() {
