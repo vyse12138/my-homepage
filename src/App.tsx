@@ -6,10 +6,11 @@ import { Box } from '@mui/material'
 import Navigation from './components/Navigation'
 import { grey, orange } from '@mui/material/colors'
 import Scene from './components/Scene'
-import Index from './pages'
+import Home from './pages/Home'
 import Footer from './components/Footer'
 import contents from './static/data/contents'
 import Project from './pages/Project'
+import Post from './pages/Post'
 export const GlobalContext = React.createContext({
   toggleTheme: () => {},
   toggleLanguage: () => {},
@@ -63,7 +64,8 @@ export default function App() {
             flexDirection: 'column',
             alignItems: 'center',
             bgcolor: 'background.default',
-            color: 'text.primary'
+            color: 'text.primary',
+            transition: 'all 0.3s linear'
           }}
         >
           <BrowserRouter>
@@ -81,9 +83,9 @@ export default function App() {
 const AnimatedRoutes = () => (
   <AnimatePresence exitBeforeEnter>
     <Routes location={useLocation()} key={location.pathname}>
-      <Route path='/' element={<Index />} />
+      <Route path='/' element={<Home />} />
       <Route path='/projects' element={<Project />} />
-      <Route path='/posts' element={<Index />} />
+      <Route path='/posts' element={<Post />} />
     </Routes>
   </AnimatePresence>
 )

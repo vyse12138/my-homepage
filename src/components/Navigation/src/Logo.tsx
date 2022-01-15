@@ -6,13 +6,9 @@ import LogoLight from '../../../static/images/footprint.png'
 import Typography from '@mui/material/Typography'
 import { GlobalContext } from '../../../App'
 
-export default function Logo() {
+export default function Logo({ name }: { name: String }) {
   const globalContext = useContext(GlobalContext)
-  const contents = useMemo(() => {
-    return globalContext.english
-      ? globalContext.contents.english.nav
-      : globalContext.contents.chinese.nav
-  }, [globalContext.english])
+
   const theme = useTheme()
   return (
     <Box
@@ -26,7 +22,7 @@ export default function Logo() {
         ) : (
           <img src={LogoLight} alt='logo' width='20' />
         )}
-        {contents.index}
+        {name}
       </Typography>
     </Box>
   )

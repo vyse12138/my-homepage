@@ -56,7 +56,7 @@ export default {
       }
     },
     nav: {
-      index: 'Yulei',
+      name: 'Yulei',
       project: 'Projects',
       post: 'Posts'
     }
@@ -108,7 +108,7 @@ export default {
       }
     },
     nav: {
-      index: '小诸',
+      name: '小诸',
       project: '项目',
       post: '文章'
     }
