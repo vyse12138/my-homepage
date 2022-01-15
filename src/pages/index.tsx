@@ -5,7 +5,7 @@ import Intro from '../components/Intro'
 
 export default function Index() {
   return (
-    <Box sx={{ minHeight: '2200px' }}>
+    <Box sx={{ marginBottom: '10rem' }}>
       <Intro />
     </Box>
   )

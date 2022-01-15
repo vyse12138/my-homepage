@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { GlobalContext } from '../../App'
 import { useTheme } from '@mui/material/styles'
-import LightMode from '@mui/icons-material/LightMode'
-import DarkMode from '@mui/icons-material/DarkMode'
+import { Translate, DarkMode, LightMode } from '@mui/icons-material'
 import { Box, IconButton, Typography } from '@mui/material'
 import { grey, orange, cyan } from '@mui/material/colors'
 import Logo from './src/Logo'
 import { NavLink } from 'react-router-dom'
 export default function Navigation() {
   const globalContext = React.useContext(GlobalContext)
+  const contents = useMemo(() => {
+    return globalContext.english
+      ? globalContext.contents.english.nav
+      : globalContext.contents.chinese.nav
+  }, [globalContext.english])
   const theme = useTheme()
 
   return (
@@ -62,7 +66,7 @@ export default function Navigation() {
               }
             }}
           >
-            Projects
+            {contents.project}
           </Typography>
         </NavLink>
         <NavLink
@@ -86,14 +90,24 @@ export default function Navigation() {
               }
             }}
           >
-            Posts
+            {contents.post}
           </Typography>
         </NavLink>
 
         <IconButton
+          onClick={globalContext.toggleLanguage}
+          sx={{
+            marginLeft: 'auto',
+            color: 'inherit'
+          }}
+        >
+          <Translate />
+        </IconButton>
+
+        <IconButton
           onClick={globalContext.toggleTheme}
           sx={{
-            marginLeft: 'auto'
+            color: 'inherit'
           }}
         >
           {theme.palette.mode === 'dark' ? <DarkMode /> : <LightMode />}

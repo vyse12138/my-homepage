@@ -23,8 +23,8 @@ export default function Footer({
       icon={icon}
       variant='outlined'
       sx={{
-        marginRight: '10px',
-        marginBottom: '10px'
+        marginRight: '20px',
+        marginBottom: '20px'
       }}
     ></Chip>
   )

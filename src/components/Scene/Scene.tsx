@@ -16,6 +16,7 @@ export default function Scene() {
     const scene = new THREE.Scene()
 
     const loader = new GLTFLoader()
+    // "Voxel Dog" (https://skfb.ly/6W9QU) by Takuya is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
     loader.load('./dog.glb', function (gltf) {
       gltf.scene.position.y = -1.75
       scene.add(gltf.scene)

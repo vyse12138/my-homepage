@@ -6,7 +6,14 @@ import Navigation from './components/Navigation'
 import { grey, orange } from '@mui/material/colors'
 import Scene from './components/Scene'
 import Index from './pages'
-export const GlobalContext = React.createContext({ toggleTheme: () => {} })
+import Footer from './components/Footer'
+import contents from './static/data/contents'
+export const GlobalContext = React.createContext({
+  toggleTheme: () => {},
+  toggleLanguage: () => {},
+  contents,
+  english: true
+})
 
 export default function App() {
   // Global theme
@@ -23,11 +30,19 @@ export default function App() {
     }
   })
 
+  // Global language
+  const [english, setEnglish] = React.useState<boolean>(true)
+
   // Global context
   const globalContext = {
     toggleTheme: () => {
       setDark(dark => !dark)
-    }
+    },
+    toggleLanguage: () => {
+      setEnglish(english => !english)
+    },
+    contents,
+    english
   }
 
   return (
@@ -51,6 +66,7 @@ export default function App() {
               <Route path='/projects' element={<Index />} />
               <Route path='/posts' element={<Index />} />
             </Routes>
+            <Footer />
           </BrowserRouter>
         </Box>
       </ThemeProvider>

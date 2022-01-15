@@ -9,7 +9,6 @@ import JueJinDark from '../../../static/images/juejin.svg'
 export default function Footer() {
   const globalContext = React.useContext(GlobalContext)
   const theme = useTheme()
-  console.log(theme.palette.mode)
 
   return (
     <>
@@ -23,7 +22,7 @@ export default function Footer() {
           color: 'inherit'
         }}
       >
-        <GitHub sx={{ paddingRight: '5px' }} /> @Vyse12138
+        <GitHub sx={{ paddingRight: '5px' }} /> @vyse12138
       </Link>
 
       <br />
@@ -57,7 +56,7 @@ export default function Footer() {
         ) : (
           <img src={JueJinDark} height='24px' />
         )}
-        <Box sx={{ paddingRight: '5px' }} /> @小诸
+        <Box sx={{ paddingRight: '5px' }} /> @小诸不是小猪
       </Link>
 
       <br />
