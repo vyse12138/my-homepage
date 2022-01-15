@@ -31,7 +31,9 @@ export default function App() {
   })
 
   // Global language
-  const [english, setEnglish] = React.useState<boolean>(true)
+  const [english, setEnglish] = React.useState<boolean>(
+    /^en\b/.test(navigator.language)
+  )
 
   // Global context
   const globalContext = {
