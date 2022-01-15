@@ -54,7 +54,7 @@ export default function Footer() {
           {contents.work.sections.map(section => (
             <TableRow key={section.date} sx={{ verticalAlign: 'top' }}>
               <TableCell
-                sx={{ minWidth: '130px', paddingLeft: '0', border: 'none' }}
+                sx={{ minWidth: '150px', paddingLeft: '0', border: 'none' }}
               >
                 <Typography variant='subtitle1' sx={{ fontWeight: 'bold' }}>
                   {section.date}
