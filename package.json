@@ -1,6 +1,9 @@
 {
   "name": "yulei-homepage",
   "version": "0.0.0",
+  "description": "Yulei's homepage",
+  "author": "Yulei Zhu",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
