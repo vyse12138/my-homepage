@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { GlobalContext } from '../../App'
 import { useTheme } from '@mui/material/styles'
 import { Translate, DarkMode, LightMode } from '@mui/icons-material'
@@ -103,7 +104,6 @@ export default function Navigation() {
         >
           <Translate />
         </IconButton>
-
         <IconButton
           onClick={globalContext.toggleTheme}
           sx={{

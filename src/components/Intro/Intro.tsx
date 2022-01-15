@@ -1,4 +1,4 @@
-import React, { Fragment, useMemo, useRef } from 'react'
+import React, { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import { GlobalContext } from '../../App'
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
 import {
@@ -16,12 +16,22 @@ import Interest from './src/Interest'
 import { MusicNote } from '@mui/icons-material'
 import interests from '../../static/data/interests'
 
-export default function Footer() {
+export default function Intro() {
   const globalContext = React.useContext(GlobalContext)
-  const contents = useMemo(() => {
-    return globalContext.english
+  const [contents, setContents] = useState(
+    globalContext.english
       ? globalContext.contents.english.intro
       : globalContext.contents.chinese.intro
+  )
+
+  useEffect(() => {
+    setTimeout(() => {
+      setContents(
+        globalContext.english
+          ? globalContext.contents.english.intro
+          : globalContext.contents.chinese.intro
+      )
+    }, 350)
   }, [globalContext.english])
   const theme = useTheme()
   return (

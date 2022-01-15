@@ -1,5 +1,6 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
 import { Box } from '@mui/material'
 import Navigation from './components/Navigation'
@@ -8,6 +9,7 @@ import Scene from './components/Scene'
 import Index from './pages'
 import Footer from './components/Footer'
 import contents from './static/data/contents'
+import Project from './pages/Project'
 export const GlobalContext = React.createContext({
   toggleTheme: () => {},
   toggleLanguage: () => {},
@@ -15,6 +17,11 @@ export const GlobalContext = React.createContext({
   english: true
 })
 
+const variants = {
+  hidden: { opacity: 0, x: 0, y: 20 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: -0, y: 20 }
+}
 export default function App() {
   // Global theme
   const [dark, setDark] = React.useState<boolean>(true)
@@ -54,7 +61,6 @@ export default function App() {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            width: '100%',
             alignItems: 'center',
             bgcolor: 'background.default',
             color: 'text.primary'
@@ -63,11 +69,7 @@ export default function App() {
           <BrowserRouter>
             <Navigation />
             <Scene />
-            <Routes>
-              <Route path='/' element={<Index />} />
-              <Route path='/projects' element={<Index />} />
-              <Route path='/posts' element={<Index />} />
-            </Routes>
+            <AnimatedRoutes />
             <Footer />
           </BrowserRouter>
         </Box>
@@ -75,3 +77,13 @@ export default function App() {
     </GlobalContext.Provider>
   )
 }
+
+const AnimatedRoutes = () => (
+  <AnimatePresence exitBeforeEnter>
+    <Routes location={useLocation()} key={location.pathname}>
+      <Route path='/' element={<Index />} />
+      <Route path='/projects' element={<Project />} />
+      <Route path='/posts' element={<Index />} />
+    </Routes>
+  </AnimatePresence>
+)
