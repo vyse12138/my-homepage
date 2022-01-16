@@ -1,14 +1,5 @@
-import React, {
-  useEffect,
-  useContext,
-  useMemo,
-  useState,
-  useRef,
-  ReactElement
-} from 'react'
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
-import { Box } from '@mui/material'
-import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect, useContext, useState, useRef, ReactElement } from 'react'
+import { motion } from 'framer-motion'
 import { GlobalContext } from '../../App'
 
 const variants = {

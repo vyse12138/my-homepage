@@ -1,22 +1,6 @@
-import React, { useState } from 'react'
-import { GlobalContext } from '../../App'
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
-import {
-  Box,
-  IconButton,
-  Typography,
-  Card,
-  CardMedia,
-  Modal,
-  Backdrop,
-  Fade,
-  Button,
-  Popover,
-  Link
-} from '@mui/material'
-import pig from '../../static/images/pig.jpeg'
+import { useState } from 'react'
+import { Box, Typography, CardMedia, Link } from '@mui/material'
 import { GitHub, WebAsset } from '@mui/icons-material'
-import AnimateWrapper from '../AnimateWrapper'
 import { AnimatePresence, motion } from 'framer-motion'
 
 export default function ProjectTab({
@@ -32,8 +16,6 @@ export default function ProjectTab({
   preview: string
   source: string
 }) {
-  const globalContext = React.useContext(GlobalContext)
-  const theme = useTheme()
   const [info, setInfo] = useState(false)
   const handleClick = () => {
     setInfo(e => !e)

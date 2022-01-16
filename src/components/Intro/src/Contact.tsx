@@ -1,13 +1,10 @@
-import React from 'react'
-import { GlobalContext } from '../../../App'
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
-import { Box, IconButton, Typography, Link } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
+import { Box, Link } from '@mui/material'
 import { LinkedIn, GitHub, Email } from '@mui/icons-material'
 import JueJin from '../../../static/images/juejin-dark.svg'
 import JueJinDark from '../../../static/images/juejin.svg'
 
 export default function Footer() {
-  const globalContext = React.useContext(GlobalContext)
   const theme = useTheme()
 
   return (

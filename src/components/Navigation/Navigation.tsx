@@ -1,18 +1,18 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { useContext, useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import { GlobalContext } from '../../App'
 import { useTheme } from '@mui/material/styles'
 import { Translate, DarkMode, LightMode } from '@mui/icons-material'
-import { Box, createTheme, IconButton, Typography } from '@mui/material'
-import { grey, orange, cyan } from '@mui/material/colors'
+import { Box, IconButton, Typography } from '@mui/material'
+import { cyan } from '@mui/material/colors'
 import { alpha } from '@mui/material/styles'
 import AnimateWrapper from '../../components/AnimateWrapper'
-
 import Logo from './src/Logo'
 import { NavLink } from 'react-router-dom'
+
 export default function Navigation() {
   const theme = useTheme()
-  const globalContext = React.useContext(GlobalContext)
+  const globalContext = useContext(GlobalContext)
   const [contents, setContents] = useState(
     globalContext.english
       ? globalContext.contents.english.nav
@@ -63,7 +63,6 @@ export default function Navigation() {
           >
             <Logo name={contents.name} />
           </Box>
-
           <NavLink
             to='/projects'
             style={({ isActive }) => {
@@ -76,15 +75,17 @@ export default function Navigation() {
               }
             }}
           >
-            <Typography
-              sx={{
-                '&:hover': {
-                  textDecoration: 'underline'
-                }
-              }}
-            >
-              {contents.project}
-            </Typography>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Typography
+                sx={{
+                  '&:hover': {
+                    textDecoration: 'underline'
+                  }
+                }}
+              >
+                {contents.project}
+              </Typography>
+            </motion.div>
           </NavLink>
           <NavLink
             to='/posts'
@@ -100,15 +101,17 @@ export default function Navigation() {
               }
             }}
           >
-            <Typography
-              sx={{
-                '&:hover': {
-                  textDecoration: 'underline'
-                }
-              }}
-            >
-              {contents.post}
-            </Typography>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Typography
+                sx={{
+                  '&:hover': {
+                    textDecoration: 'underline'
+                  }
+                }}
+              >
+                {contents.post}
+              </Typography>
+            </motion.div>
           </NavLink>
 
           <IconButton

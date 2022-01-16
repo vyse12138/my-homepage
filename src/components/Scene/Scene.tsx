@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Box, CircularProgress } from '@mui/material'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { minWidth } from '@mui/system'
 
 function easeOutCirc(x: number) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
 }
 
 export default function Scene() {
-  const container = React.useRef<HTMLElement>(null)
+  const container = useRef<HTMLElement>(null)
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     const scene = new THREE.Scene()

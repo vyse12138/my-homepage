@@ -1,19 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
+import { useContext, useEffect, useState } from 'react'
 import { Box, Typography } from '@mui/material'
-import Intro from '../components/Intro'
-import { AnimatePresence, motion } from 'framer-motion'
 import AnimateWrapper from '../components/AnimateWrapper'
 import PostTab from '../components/PostTab'
 import { GlobalContext } from '../App'
 
-const variants = {
-  hidden: { opacity: 0, x: 0, y: 20 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: -0, y: 20 }
-}
 export default function Post() {
-  const globalContext = React.useContext(GlobalContext)
+  const globalContext = useContext(GlobalContext)
   const [contents, setContents] = useState(
     globalContext.english
       ? globalContext.contents.english.post

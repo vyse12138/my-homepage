@@ -1,7 +1,7 @@
-import React from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { createContext, useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { Box } from '@mui/material'
 import Navigation from './components/Navigation'
 import { grey, orange, blueGrey } from '@mui/material/colors'
@@ -12,7 +12,7 @@ import contents from './static/data/contents'
 import Project from './pages/Project'
 import Post from './pages/Post'
 
-export const GlobalContext = React.createContext({
+export const GlobalContext = createContext({
   toggleTheme: () => {},
   toggleLanguage: () => {},
   contents,
@@ -26,7 +26,7 @@ const variants = {
 }
 export default function App() {
   // Global theme
-  const [dark, setDark] = React.useState<boolean>(true)
+  const [dark, setDark] = useState<boolean>(true)
   const theme = createTheme({
     palette: {
       mode: dark ? 'dark' : 'light',
@@ -41,7 +41,7 @@ export default function App() {
   })
 
   // Global language
-  const [english, setEnglish] = React.useState<boolean>(
+  const [english, setEnglish] = useState<boolean>(
     /^en\b/.test(navigator.language)
   )
 

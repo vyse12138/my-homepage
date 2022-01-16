@@ -1,23 +1,19 @@
-import React, { Fragment, useEffect, useMemo, useRef, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../../App'
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
 import {
   Box,
   Typography,
   Table,
   TableBody,
   TableRow,
-  TableCell,
-  Chip
+  TableCell
 } from '@mui/material'
 import hi from '../../static/images/Hi.gif'
 import Contact from './src/Contact'
 import Interest from './src/Interest'
-import { MusicNote } from '@mui/icons-material'
-import interests from '../../static/data/interests'
 
 export default function Intro() {
-  const globalContext = React.useContext(GlobalContext)
+  const globalContext = useContext(GlobalContext)
   const [contents, setContents] = useState(
     globalContext.english
       ? globalContext.contents.english.intro
@@ -33,7 +29,6 @@ export default function Intro() {
       )
     }, 350)
   }, [globalContext.english])
-  const theme = useTheme()
   return (
     <Box
       sx={{
