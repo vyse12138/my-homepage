@@ -4,7 +4,7 @@ import { LinkedIn, GitHub, Email } from '@mui/icons-material'
 import JueJin from '../../../static/images/juejin-dark.svg'
 import JueJinDark from '../../../static/images/juejin.svg'
 
-export default function Footer() {
+export default function Contact() {
   const theme = useTheme()
 
   return (
@@ -12,15 +12,19 @@ export default function Footer() {
       <Link
         href='https://github.com/Vyse12138'
         target='_blank'
-        underline='hover'
         sx={{
           display: 'flex',
           alignItems: 'center',
-          color: 'inherit',
           width: 'max-content'
         }}
       >
-        <GitHub sx={{ paddingRight: '5px' }} /> @vyse12138
+        <GitHub
+          sx={{
+            paddingRight: '5px',
+            color: theme.palette.mode === 'dark' ? 'white' : 'black'
+          }}
+        />{' '}
+        @vyse12138
       </Link>
 
       <br />
@@ -28,26 +32,28 @@ export default function Footer() {
       <Link
         href='https://www.linkedin.com/in/yulei-zhu-902193195/'
         target='_blank'
-        underline='hover'
         sx={{
           display: 'flex',
           alignItems: 'center',
-          color: 'inherit',
           width: 'max-content'
         }}
       >
-        <LinkedIn sx={{ paddingRight: '5px' }} /> @yulei
+        <LinkedIn
+          sx={{
+            paddingRight: '5px',
+            color: theme.palette.mode === 'dark' ? 'white' : 'black'
+          }}
+        />{' '}
+        @yulei
       </Link>
       <br />
 
       <Link
         href='https://juejin.cn/user/1407794523416350'
         target='_blank'
-        underline='hover'
         sx={{
           display: 'flex',
           alignItems: 'center',
-          color: 'inherit',
           width: 'max-content'
         }}
       >
@@ -64,15 +70,19 @@ export default function Footer() {
       <Link
         href='mailto:yulei.zhu@outlook.com'
         target='_blank'
-        underline='hover'
         sx={{
           display: 'flex',
           alignItems: 'center',
-          color: 'inherit',
           width: 'max-content'
         }}
       >
-        <Email sx={{ paddingRight: '5px' }} /> yulei.zhu@outlook.com
+        <Email
+          sx={{
+            paddingRight: '5px',
+            color: theme.palette.mode === 'dark' ? 'white' : 'black'
+          }}
+        />{' '}
+        yulei.zhu@outlook.com
       </Link>
     </>
   )

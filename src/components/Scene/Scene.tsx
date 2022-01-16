@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Box, CircularProgress } from '@mui/material'
+import { Box, CircularProgress, useTheme } from '@mui/material'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
@@ -10,7 +10,9 @@ function easeOutCirc(x: number) {
 
 export default function Scene() {
   const container = useRef<HTMLElement>(null)
+  const theme = useTheme()
   const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
     const scene = new THREE.Scene()
 
@@ -20,7 +22,6 @@ export default function Scene() {
       gltf.scene.position.y = -1.75
       scene.add(gltf.scene)
 
-      const scale = 6
       const camera = new THREE.OrthographicCamera(-9, 9, 6, -6, 0.01, 50000)
 
       camera.position.copy(
@@ -35,7 +36,12 @@ export default function Scene() {
         alpha: true
       })
       renderer.setPixelRatio(window.devicePixelRatio)
-      renderer.setSize(600, 400)
+      window.innerWidth < 600
+        ? renderer.setSize(
+            0.9 * window.innerWidth,
+            0.9 * (window.innerWidth / 3) * 2
+          )
+        : renderer.setSize(600, 400)
       renderer.outputEncoding = THREE.sRGBEncoding
 
       const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
@@ -94,7 +100,11 @@ export default function Scene() {
             minWidth: 600,
             alignItems: 'center',
             justifyContent: 'center',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            [theme.breakpoints.down('sm')]: {
+              minHeight: '200',
+              minWidth: '300'
+            }
           }}
         >
           <CircularProgress />

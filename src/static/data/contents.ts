@@ -35,6 +35,7 @@ export default {
             date: '2021.08 - Present',
             location: 'Melbourne',
             role: 'Full-Stack Developer @Movember',
+            type: 'Placement',
             description:
               "Worked in an agile team to develop web product. Used react + TypeScript + Node + AWS Serverless as the main tech stack, wrote robust (95% + Jest coverage) and elegant (Airbnb based ESlint) code as well as reviewed teams' PRs."
           },
@@ -42,6 +43,8 @@ export default {
             date: '2020.12 - 2021.03',
             location: 'Melbourne',
             role: 'Front-End Developer @Agriview',
+            type: 'Internship',
+
             description:
               'Refactored an old project with Vue3 and featured more responsive supports. Reduced some redundant code, and added clear comments to make it more extensible.'
           }
@@ -150,6 +153,7 @@ export default {
             date: '2021.08 - 至今',
             location: '墨尔本',
             role: '全栈工程师 @Movember',
+            type: 'Placement',
             description:
               '在敏捷小组中开发网页项目，主要技术栈为 React + TypeScript + Node + AWS Serverless。编写优雅（Airbnb 风格）以及可靠（Jest 覆盖率 95%）代码，并审核他人 PRs'
           },
@@ -157,6 +161,7 @@ export default {
             date: '2020.12 - 2021.03',
             location: '墨尔本',
             role: '前端工程师 @Agriview',
+            type: '实习',
             description:
               '使用 Vue3 重构了旧项目，添加更为完善的响应式支持，并编写了用户反馈模块。减少冗余代码，添加清晰注释，增加代码的扩展性和维护性'
           }

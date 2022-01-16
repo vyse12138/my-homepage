@@ -48,7 +48,10 @@ export default function Navigation() {
             width: '640px',
             height: '56px',
             m: 'auto',
-            alignItems: 'center'
+            alignItems: 'center',
+            [theme.breakpoints.down('sm')]: {
+              width: '90%'
+            }
           }}
         >
           <Box
