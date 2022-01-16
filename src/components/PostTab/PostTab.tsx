@@ -15,22 +15,20 @@ import {
   Link
 } from '@mui/material'
 import pig from '../../static/images/pig.jpeg'
-import { GitHub, WebAsset } from '@mui/icons-material'
+import { GitHub, MenuBook } from '@mui/icons-material'
 import AnimateWrapper from '../AnimateWrapper'
 import { AnimatePresence, motion } from 'framer-motion'
 
-export default function ProjectTab({
+export default function PostTab({
   img,
   title,
   description,
-  preview,
-  source
+  preview
 }: {
   img: string
   title: string
   description: string
   preview: string
-  source: string
 }) {
   const globalContext = React.useContext(GlobalContext)
   const theme = useTheme()
@@ -81,22 +79,7 @@ export default function ProjectTab({
                     width: 'max-content'
                   }}
                 >
-                  <WebAsset sx={{ paddingRight: '5px' }} /> Preview
-                </Link>
-              )}
-              {source && (
-                <Link
-                  href={source}
-                  target='_blank'
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                    width: 'max-content'
-                  }}
-                >
-                  <GitHub sx={{ paddingRight: '5px' }} />{' '}
-                  <Typography>Source</Typography>
+                  <MenuBook sx={{ paddingRight: '5px' }} /> Read it here
                 </Link>
               )}
             </Box>

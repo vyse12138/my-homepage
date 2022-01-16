@@ -34,13 +34,11 @@ export default function Project() {
       <Box
         sx={{
           marginBottom: '10rem',
-          minHeight: '1200px',
-
           width: '600px'
         }}
       >
         <Typography variant='h4' sx={{ marginBottom: '2rem' }}>
-          Project
+          {contents.title}
         </Typography>
         <Box
           sx={{
