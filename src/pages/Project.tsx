@@ -29,12 +29,19 @@ export default function Project() {
           marginBottom: '10rem',
           width: '600px',
           [theme.breakpoints.down('sm')]: {
-            width: '100%',
-            textAlign: 'center'
+            width: '100%'
           }
         }}
       >
-        <Typography variant='h4' sx={{ marginBottom: '2rem' }}>
+        <Typography
+          variant='h4'
+          sx={{
+            marginBottom: '2rem',
+            [theme.breakpoints.down('sm')]: {
+              textAlign: 'center'
+            }
+          }}
+        >
           {contents.title}
         </Typography>
         <Box

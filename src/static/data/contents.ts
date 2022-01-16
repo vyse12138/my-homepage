@@ -62,6 +62,20 @@ export default {
           { label: 'Video Game', icon: SportsEsports }
         ]
       },
+      tech: {
+        title: 'Tech Stack',
+        sections: [
+          { name: 'JavaScript', point: 9 },
+          { name: 'React', point: 8 },
+          { name: 'Vue', point: 8 },
+          { name: 'TypeScript', point: 8 },
+          { name: 'UI Libraries', point: 8 },
+          { name: 'CSS', point: 7 },
+          { name: 'Node.js', point: 6 },
+          { name: 'Three.js', point: 6 },
+          { name: 'AWS Serverless', point: 5 }
+        ]
+      },
       contact: {
         title: "I'm"
       }
@@ -78,17 +92,9 @@ export default {
           img: mc,
           title: 'Minecraft Clone',
           description:
-            'Try out the web-based Minecraft clone! It support placing/destroying blocks and dynamic/random terrain generation. Tech stack: three.js',
+            'Try out the web-based Minecraft clone! It support placing/destroying blocks and dynamic/random terrain generation. Tech stack: Three.js',
           preview: 'https://three-minecraft.netlify.app',
           source: 'https://github.com/Vyse12138/three-minecraft'
-        },
-        {
-          img: cocktail,
-          title: 'Cocktail Recipes',
-          description:
-            'Search for your favorite cocktail recipes and make a drink yourself. Tech stack: Vue3 + TypeScript',
-          preview: 'https://main--vue-cocktail.netlify.app/',
-          source: 'https://github.com/Vyse12138/cocktail-recipes'
         },
         {
           img: okcode,
@@ -97,6 +103,14 @@ export default {
             "My final year software development project, OKCode is a code analysis and visualize tool that also provides improvement suggestion. It targets to improve first-year SUT(my uni) students' code quality.",
           preview: '',
           source: ''
+        },
+        {
+          img: cocktail,
+          title: 'Cocktail Recipes',
+          description:
+            'Search for your favorite cocktail recipes and make a drink yourself. Tech stack: Vue3 + TypeScript',
+          preview: 'https://main--vue-cocktail.netlify.app/',
+          source: 'https://github.com/Vyse12138/cocktail-recipes'
         }
       ]
     },
@@ -111,6 +125,14 @@ export default {
           preview: 'https://github.com/Vyse12138/algorithms-4th-edition'
         },
         {
+          img: basis,
+          title: 'JavaScript Basis',
+          description:
+            'Reading notes on JavaScript: The Definitive Guide, 7th Edition. Including pretty much everything we need to know about JavaScript.',
+          preview:
+            'https://vyse12138.github.io/javascript-the-definitive-guide/#/'
+        },
+        {
           img: css,
           title: 'CSS Selectors',
           description:
@@ -123,14 +145,6 @@ export default {
           description:
             "Should we use Map or Object when developing JavaScript project? What's the difference and why?",
           preview: 'https://juejin.cn/post/6941232930945499173'
-        },
-        {
-          img: basis,
-          title: 'JavaScript Basis',
-          description:
-            'Reading notes on JavaScript: The Definitive Guide, 7th Edition. Including pretty much everything we need to know about JavaScript.',
-          preview:
-            'https://vyse12138.github.io/javascript-the-definitive-guide/#/'
         }
       ]
     }
@@ -143,7 +157,7 @@ export default {
         title: '简介',
         sections: [
           '我在2018年开始了我的大学旅程，在斯威本科技大学（SUT）攻读软件工程荣誉学士学位，计划于 2022 年底毕业。',
-          '在大三时，我渐渐爱上了前端开发，并在前端领域进行了更深入的学习，与同年在 Agriview 进行了3个月的前端工程师实习；在大四时，接受了 Movember 为期12个月的全栈工程师 Placement Offer。'
+          '在大三时，我渐渐爱上了前端开发，并在前端领域进行了更深入的学习，与同年在 Agriview 进行了3个月的前端工程师实习；在大四时，接受了 Movember 为期12个月的全栈工程师 Placement Offer 并工作至今。'
         ]
       },
       work: {
@@ -165,6 +179,20 @@ export default {
             description:
               '使用 Vue3 重构了旧项目，添加更为完善的响应式支持，并编写了用户反馈模块。减少冗余代码，添加清晰注释，增加代码的扩展性和维护性'
           }
+        ]
+      },
+      tech: {
+        title: '技术栈',
+        sections: [
+          { name: 'JavaScript', point: 9 },
+          { name: 'React', point: 8 },
+          { name: 'Vue', point: 8 },
+          { name: 'TypeScript', point: 7 },
+          { name: '各类 UI 框架', point: 8 },
+          { name: 'CSS', point: 7 },
+          { name: 'Node.js', point: 6 },
+          { name: 'Three.js', point: 6 },
+          { name: 'AWS Serverless', point: 5 }
         ]
       },
       interest: {
@@ -200,20 +228,20 @@ export default {
           source: 'https://github.com/Vyse12138/three-minecraft'
         },
         {
-          img: cocktail,
-          title: '调酒菜单',
-          description:
-            '找到你最喜欢的鸡尾酒，然后看看它是怎么调出来的吧。技术栈：Vue3 + Typescript',
-          preview: 'https://main--vue-cocktail.netlify.app/',
-          source: 'https://github.com/Vyse12138/cocktail-recipes'
-        },
-        {
           img: okcode,
           title: 'OKCode',
           description:
             '我的毕设 OKCode 是一个代码复杂度分析软件。分析输入代码并给予相应的改进建议，目标是为 SUT（我的大学）大一的学生提高代码质量。技术栈：React + MUI + GraphQL + C#',
           preview: '',
           source: ''
+        },
+        {
+          img: cocktail,
+          title: '调酒菜单',
+          description:
+            '找到你最喜欢的鸡尾酒，然后看看它是怎么调出来的吧。技术栈：Vue3 + Typescript',
+          preview: 'https://main--vue-cocktail.netlify.app/',
+          source: 'https://github.com/Vyse12138/cocktail-recipes'
         }
       ]
     },

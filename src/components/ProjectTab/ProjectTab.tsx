@@ -73,7 +73,6 @@ export default function ProjectTab({
                   sx={{
                     display: 'flex',
                     alignItems: 'center',
-                    textAlign: 'center',
                     width: 'max-content'
                   }}
                 >

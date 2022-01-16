@@ -35,6 +35,15 @@ export default function App() {
         paper: dark ? '#191919' : orange[100]
       }
     },
+    breakpoints: {
+      values: {
+        xs: 366,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536
+      }
+    },
     typography: {
       fontFamily: 'Roboto, ZCOOL KuaiLe'
     }

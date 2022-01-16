@@ -13,6 +13,7 @@ import hi from '../../static/images/Hi.gif'
 import Contact from './src/Contact'
 import Interest from './src/Interest'
 import { LocationOn, Work } from '@mui/icons-material'
+import Tech from './src/Tech'
 
 export default function Intro() {
   const theme = useTheme()
@@ -58,7 +59,7 @@ export default function Intro() {
       ))}
 
       {/* Work */}
-      {window.innerWidth > 600 && (
+      {/* {window.innerWidth > 600 && (
         <>
           <Typography variant='h5' sx={{ marginTop: '3rem' }}>
             {contents.work.title}
@@ -104,7 +105,17 @@ export default function Intro() {
             </TableBody>
           </Table>
         </>
-      )}
+      )} */}
+      {/* Tech-Stack */}
+      <Typography variant='h5' sx={{ marginTop: '3rem', marginBottom: '1rem' }}>
+        {contents.tech.title}
+      </Typography>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+        {contents.tech.sections.map(section => (
+          <Tech name={section.name} point={section.point} />
+        ))}
+      </Box>
+
       {/* Interest */}
       <Typography variant='h5' sx={{ marginTop: '3rem', marginBottom: '1rem' }}>
         {contents.interest.title}{' '}

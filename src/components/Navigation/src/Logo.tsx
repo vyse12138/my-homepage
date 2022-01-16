@@ -15,11 +15,21 @@ export default function Logo({ name }: { name: String }) {
     >
       <Typography variant='h5'>
         <motion.div whileHover={{ scale: 1.2 }}>
-          {theme.palette.mode === 'dark' ? (
-            <img src={LogoDark} alt='logo' width='20' />
-          ) : (
-            <img src={LogoLight} alt='logo' width='20' />
-          )}
+          <Box
+            sx={{
+              display: 'inline',
+              [theme.breakpoints.down('xs')]: {
+                display: 'none'
+              }
+            }}
+          >
+            {theme.palette.mode === 'dark' ? (
+              <img src={LogoDark} alt='logo' width='20' />
+            ) : (
+              <img src={LogoLight} alt='logo' width='20' />
+            )}
+          </Box>
+
           {name}
         </motion.div>
       </Typography>
