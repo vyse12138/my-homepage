@@ -19,7 +19,8 @@ export default function Footer() {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          color: 'inherit'
+          color: 'inherit',
+          width: 'max-content'
         }}
       >
         <GitHub sx={{ paddingRight: '5px' }} /> @vyse12138
@@ -34,7 +35,8 @@ export default function Footer() {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          color: 'inherit'
+          color: 'inherit',
+          width: 'max-content'
         }}
       >
         <LinkedIn sx={{ paddingRight: '5px' }} /> @yulei
@@ -48,7 +50,8 @@ export default function Footer() {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          color: 'inherit'
+          color: 'inherit',
+          width: 'max-content'
         }}
       >
         {theme.palette.mode === 'dark' ? (
@@ -68,7 +71,8 @@ export default function Footer() {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          color: 'inherit'
+          color: 'inherit',
+          width: 'max-content'
         }}
       >
         <Email sx={{ paddingRight: '5px' }} /> yulei.zhu@outlook.com

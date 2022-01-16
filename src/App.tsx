@@ -4,13 +4,14 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
 import { Box } from '@mui/material'
 import Navigation from './components/Navigation'
-import { grey, orange } from '@mui/material/colors'
+import { grey, orange, blueGrey } from '@mui/material/colors'
 import Scene from './components/Scene'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 import contents from './static/data/contents'
 import Project from './pages/Project'
 import Post from './pages/Post'
+
 export const GlobalContext = React.createContext({
   toggleTheme: () => {},
   toggleLanguage: () => {},
@@ -30,7 +31,8 @@ export default function App() {
     palette: {
       mode: dark ? 'dark' : 'light',
       background: {
-        default: dark ? grey[900] : orange[50]
+        default: dark ? grey[900] : orange[50],
+        paper: dark ? '#191919' : orange[100]
       }
     },
     typography: {

@@ -8,6 +8,11 @@ import {
   MenuBook
 } from '@mui/icons-material'
 
+import pig from '../images/pig.jpeg'
+import mc from '../images/mc.png'
+import cocktail from '../images/cocktail.png'
+import okcode from '../images/okcode.png'
+
 export default {
   english: {
     intro: {
@@ -59,6 +64,35 @@ export default {
       name: 'Yulei',
       project: 'Projects',
       post: 'Posts'
+    },
+    project: {
+      name: 'Projects',
+      sections: [
+        {
+          img: mc,
+          title: 'Minecraft Clone',
+          description:
+            'Try out the web-based Minecraft clone! It support placing/destroying blocks and dynamic/random terrain generation. Tech stack: three.js',
+          preview: 'https://three-minecraft.netlify.app',
+          source: 'https://github.com/Vyse12138/three-minecraft'
+        },
+        {
+          img: cocktail,
+          title: 'Cocktail Recipes',
+          description:
+            'Search for your favorite cocktail recipes and make a drink yourself. Tech stack: Vue3 + TypeScript',
+          preview: 'https://main--vue-cocktail.netlify.app/',
+          source: 'https://github.com/Vyse12138/cocktail-recipes'
+        },
+        {
+          img: okcode,
+          title: 'OKCode',
+          description:
+            "My final year software development project, OKCode is a code analysis and visualize tool that also provides improvement suggestion. It targets to improve first-year SUT(my uni) students' code quality.",
+          preview: '',
+          source: ''
+        }
+      ]
     }
   },
   chinese: {
@@ -111,6 +145,35 @@ export default {
       name: '小诸',
       project: '项目',
       post: '文章'
+    },
+    project: {
+      name: '项目',
+      sections: [
+        {
+          img: mc,
+          title: '我的世界网页版',
+          description:
+            '来试一下网页版的简易我的世界吧，支持方块放置/破坏，动态/随机生成地形。技术栈： three.js',
+          preview: 'https://three-minecraft.netlify.app',
+          source: 'https://github.com/Vyse12138/three-minecraft'
+        },
+        {
+          img: cocktail,
+          title: '调酒菜单',
+          description:
+            '找到你最喜欢的鸡尾酒，然后看看它是怎么调出来的吧。技术栈：Vue3 + Typescript',
+          preview: 'https://main--vue-cocktail.netlify.app/',
+          source: 'https://github.com/Vyse12138/cocktail-recipes'
+        },
+        {
+          img: okcode,
+          title: 'OKCode',
+          description:
+            '我的毕设 OKCode 是一个代码复杂度分析软件。分析输入代码并给予相应的改进建议，目标是为 SUT（我的大学）大一的学生提高代码质量。技术栈：React + MUI + GraphQL + C#',
+          preview: '',
+          source: ''
+        }
+      ]
     }
   }
 }

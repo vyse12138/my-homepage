@@ -26,6 +26,10 @@ export default function AnimateWrapper({
   const isReRender = useRef(true)
   useEffect(() => {
     if (isReRender.current) {
+      window.scrollTo({
+        top: 0
+        // behavior: 'smooth'
+      })
       isReRender.current = false
     } else {
       setAnimate(e => !e)

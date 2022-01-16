@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles'
 import { Box, Typography } from '@mui/material'
 import Intro from '../components/Intro'
 import { AnimatePresence, motion } from 'framer-motion'
 import AnimateWrapper from '../components/AnimateWrapper'
+import ProjectTab from '../components/ProjectTab'
+import { GlobalContext } from '../App'
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: 20 },
@@ -11,10 +13,52 @@ const variants = {
   exit: { opacity: 0, x: -0, y: 20 }
 }
 export default function Project() {
+  const globalContext = React.useContext(GlobalContext)
+  const [contents, setContents] = useState(
+    globalContext.english
+      ? globalContext.contents.english.project
+      : globalContext.contents.chinese.project
+  )
+  useEffect(() => {
+    setTimeout(() => {
+      setContents(
+        globalContext.english
+          ? globalContext.contents.english.project
+          : globalContext.contents.chinese.project
+      )
+    }, 350)
+  }, [globalContext.english])
+
   return (
     <AnimateWrapper>
-      <Box sx={{ marginBottom: '10rem', minHeight: '1200px' }}>
-        <Typography variant='h5'>Project</Typography>
+      <Box
+        sx={{
+          marginBottom: '10rem',
+          minHeight: '1200px',
+
+          width: '600px'
+        }}
+      >
+        <Typography variant='h4' sx={{ marginBottom: '2rem' }}>
+          Project
+        </Typography>
+        <Box
+          sx={{
+            display: ' flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between'
+          }}
+        >
+          {contents.sections.map(project => (
+            <ProjectTab
+              img={project.img}
+              title={project.title}
+              description={project.description}
+              preview={project.preview}
+              source={project.source}
+            />
+          ))}
+        </Box>
       </Box>
     </AnimateWrapper>
   )
