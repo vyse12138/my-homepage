@@ -95,6 +95,7 @@ export default function ProjectTab({
         </motion.div>
       ) : (
         <motion.div
+          whileHover={{ scale: 1.1 }}
           key={2}
           initial={{ rotateY: -90 }}
           animate={{ rotateY: 0 }}
