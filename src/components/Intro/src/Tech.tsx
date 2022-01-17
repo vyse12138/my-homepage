@@ -20,7 +20,7 @@ export default function Tech({ name, point }: { name: string; point: number }) {
             ? '1px solid rgba(97,97,97)'
             : '1px solid rgba(189,189,189)',
         padding: '8px 10px',
-        marginRight: '20px',
+        marginRight: '10px',
         marginBottom: '20px',
         width: 'max-content'
       }}

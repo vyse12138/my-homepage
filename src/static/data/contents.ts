@@ -73,6 +73,7 @@ export default {
           { name: 'CSS', point: 7 },
           { name: 'Node.js', point: 6 },
           { name: 'Three.js', point: 6 },
+          { name: 'Jest', point: 5 },
           { name: 'AWS Serverless', point: 5 }
         ]
       },
@@ -192,6 +193,7 @@ export default {
           { name: 'CSS', point: 7 },
           { name: 'Node.js', point: 6 },
           { name: 'Three.js', point: 6 },
+          { name: 'Jest', point: 5 },
           { name: 'AWS Serverless', point: 5 }
         ]
       },
@@ -248,6 +250,13 @@ export default {
       title: '文章',
       sections: [
         {
+          img: algo,
+          title: '算法笔记',
+          description:
+            '算法第四版阅读笔记。用 TypeScript 编写各种算法比如：排序，查找，有向图，无向图等。',
+          preview: 'https://github.com/Vyse12138/algorithms-4th-edition'
+        },
+        {
           img: basis,
           title: 'JavaScript 基础',
           description:
@@ -255,13 +264,7 @@ export default {
           preview:
             'https://vyse12138.github.io/javascript-the-definitive-guide/#/'
         },
-        {
-          img: algo,
-          title: '算法笔记',
-          description:
-            '算法第四版阅读笔记。用 TypeScript 编写各种算法比如：排序，查找，有向图，无向图等。',
-          preview: 'https://github.com/Vyse12138/algorithms-4th-edition'
-        },
+
         {
           img: css,
           title: 'CSS 选择器',

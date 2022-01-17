@@ -15,7 +15,7 @@ export default function Interest({
       icon={icon}
       variant='outlined'
       sx={{
-        marginRight: '20px',
+        marginRight: '10px',
         marginBottom: '20px'
       }}
     ></Chip>

@@ -14,6 +14,7 @@ import Contact from './src/Contact'
 import Interest from './src/Interest'
 import { LocationOn, Work } from '@mui/icons-material'
 import Tech from './src/Tech'
+import { motion } from 'framer-motion'
 
 export default function Intro() {
   const theme = useTheme()
@@ -106,13 +107,20 @@ export default function Intro() {
           </Table>
         </>
       )} */}
+
       {/* Tech-Stack */}
       <Typography variant='h5' sx={{ marginTop: '3rem', marginBottom: '1rem' }}>
         {contents.tech.title}
       </Typography>
       <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
         {contents.tech.sections.map(section => (
-          <Tech name={section.name} point={section.point} />
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Tech
+              key={section.name}
+              name={section.name}
+              point={section.point}
+            />
+          </motion.div>
         ))}
       </Box>
 
