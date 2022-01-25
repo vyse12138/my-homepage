@@ -11,6 +11,7 @@ https://yuleiz.com/
 - MUI
 - Framer Motion
 - Three.js
+- Next.js
 
 ## Acknowledgment
 

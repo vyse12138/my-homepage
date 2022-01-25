@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Box, Typography, CardMedia, Link } from '@mui/material'
+import { Box, Typography, Link, useTheme } from '@mui/material'
 import { GitHub, WebAsset } from '@mui/icons-material'
 import { AnimatePresence, motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function ProjectTab({
   img,
@@ -16,6 +17,7 @@ export default function ProjectTab({
   preview: string
   source: string
 }) {
+  const theme = useTheme()
   const [info, setInfo] = useState(false)
   const handleClick = () => {
     setInfo(e => !e)
@@ -38,7 +40,10 @@ export default function ProjectTab({
               height: '227px',
               marginBottom: '2rem',
               backgroundColor: 'background.paper',
-              boxShadow: '1px solid black',
+              boxShadow:
+                theme.palette.mode === 'dark'
+                  ? ' 0 10px 16px 0 rgb(166 166 166 / 20%), 0 6px 20px 0 rgb(166 166 166 / 19%)'
+                  : ' 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)',
               borderRadius: '10px',
               padding: '1rem',
               boxSizing: 'border-box'
@@ -84,6 +89,7 @@ export default function ProjectTab({
 
             <Typography
               variant='h6'
+              component='h3'
               sx={{
                 textAlign: 'center',
                 backgroundColor: 'inherit'
@@ -108,22 +114,25 @@ export default function ProjectTab({
               width: '288px',
               marginBottom: '2rem',
               border: 'none',
-              boxShadow: 'none',
               cursor: 'pointer',
-              borderRadius: '10px'
+              borderRadius: '10px',
+              boxShadow:
+                theme.palette.mode === 'dark'
+                  ? ' 0 10px 16px 0 rgb(180 180 180 / 20%), 0 6px 20px 0 rgb(180 180 180 / 19%)'
+                  : ' 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)'
             }}
           >
-            <CardMedia
-              component='img'
+            <Image
               draggable={false}
-              image={img}
-              sx={{
-                height: '163px',
-                borderRadius: '10px'
-              }}
+              src={img}
+              height='163px'
+              width='288px'
+              className='br-10'
+              alt={title}
             />
             <Typography
               variant='h6'
+              component='h3'
               sx={{
                 textAlign: 'center',
                 backgroundColor: 'inherit',

@@ -1,6 +1,6 @@
 import { useEffect, useContext, useState, useRef, ReactElement } from 'react'
 import { motion } from 'framer-motion'
-import { GlobalContext } from '../../App'
+import { GlobalContext } from '../../pages/_app'
 
 const variants = {
   in: { opacity: 1, x: 0, y: 0 },
@@ -15,12 +15,9 @@ export default function AnimateWrapper({
   const isEnglish = useContext(GlobalContext).english
   const [animate, setAnimate] = useState(true)
   const isReRender = useRef(true)
+
   useEffect(() => {
     if (isReRender.current) {
-      window.scrollTo({
-        top: 0
-        // behavior: 'smooth'
-      })
       isReRender.current = false
     } else {
       setAnimate(e => !e)

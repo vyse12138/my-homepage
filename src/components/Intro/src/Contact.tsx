@@ -1,8 +1,7 @@
 import { useTheme } from '@mui/material/styles'
 import { Box, Link } from '@mui/material'
 import { LinkedIn, GitHub, Email } from '@mui/icons-material'
-import JueJin from '../../../static/images/juejin-dark.svg'
-import JueJinDark from '../../../static/images/juejin.svg'
+import Image from 'next/image'
 
 export default function Contact() {
   const theme = useTheme()
@@ -58,9 +57,19 @@ export default function Contact() {
         }}
       >
         {theme.palette.mode === 'dark' ? (
-          <img src={JueJin} height='24px' />
+          <Image
+            src='/images/juejin-dark.svg'
+            height='24px'
+            width='24px'
+            alt='juejin'
+          />
         ) : (
-          <img src={JueJinDark} height='24px' />
+          <Image
+            src='/images/juejin.svg'
+            height='24px'
+            width='24px'
+            alt='juejin'
+          />
         )}
         <Box sx={{ paddingRight: '5px' }} /> @小诸不是小猪
       </Link>

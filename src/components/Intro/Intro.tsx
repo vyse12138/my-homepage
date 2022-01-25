@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
-import { GlobalContext } from '../../App'
+import { GlobalContext } from '../../pages/_app'
 import {
   Box,
   Typography,
@@ -9,12 +9,12 @@ import {
   TableCell,
   useTheme
 } from '@mui/material'
-import hi from '../../static/images/Hi.gif'
 import Contact from './src/Contact'
 import Interest from './src/Interest'
 import { LocationOn, Work } from '@mui/icons-material'
 import Tech from './src/Tech'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Intro() {
   const theme = useTheme()
@@ -33,7 +33,11 @@ export default function Intro() {
           : globalContext.contents.chinese.intro
       )
     }, 350)
-  }, [globalContext.english])
+  }, [
+    globalContext.contents.chinese.intro,
+    globalContext.contents.english.intro,
+    globalContext.english
+  ])
   return (
     <Box
       sx={{
@@ -45,12 +49,13 @@ export default function Intro() {
       }}
     >
       {/* Name */}
-      <Typography variant='h4' sx={{ marginBottom: '1rem' }}>
-        {contents.title} <img src={hi} height='40px'></img>
+      <Typography variant='h4' sx={{ marginBottom: '1rem' }} component='h2'>
+        {contents.title}{' '}
+        <Image src='/images/Hi.gif' height='40px' width='40px' alt='Hi'></Image>
       </Typography>
       <Typography sx={{ marginBottom: '3rem' }}>{contents.role}</Typography>
       {/* Bio */}
-      <Typography variant='h5' sx={{ marginBottom: '1rem' }}>
+      <Typography variant='h5' component='h3' sx={{ marginBottom: '1rem' }}>
         {contents.bio.title}
       </Typography>
       {contents.bio.sections.map(section => (
@@ -62,7 +67,7 @@ export default function Intro() {
       {/* Work */}
       {/* {window.innerWidth > 600 && (
         <>
-          <Typography variant='h5' sx={{ marginTop: '3rem' }}>
+          <Typography variant='h5' component='h3' sx={{ marginTop: '3rem' }}>
             {contents.work.title}
           </Typography>
           <Table>
@@ -109,12 +114,16 @@ export default function Intro() {
       )} */}
 
       {/* Tech-Stack */}
-      <Typography variant='h5' sx={{ marginTop: '3rem', marginBottom: '1rem' }}>
+      <Typography
+        variant='h5'
+        component='h3'
+        sx={{ marginTop: '3rem', marginBottom: '1rem' }}
+      >
         {contents.tech.title}
       </Typography>
       <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
         {contents.tech.sections.map(section => (
-          <motion.div whileHover={{ scale: 1.1 }}>
+          <motion.div whileHover={{ scale: 1.1 }} key={section.name}>
             <Tech
               key={section.name}
               name={section.name}
@@ -125,7 +134,11 @@ export default function Intro() {
       </Box>
 
       {/* Interest */}
-      <Typography variant='h5' sx={{ marginTop: '3rem', marginBottom: '1rem' }}>
+      <Typography
+        variant='h5'
+        component='h3'
+        sx={{ marginTop: '3rem', marginBottom: '1rem' }}
+      >
         {contents.interest.title}{' '}
         <Box
           sx={{ display: 'inline', fontSize: '18px', verticalAlign: 'middle' }}
@@ -142,7 +155,11 @@ export default function Intro() {
       ))}
 
       {/* Contact */}
-      <Typography variant='h5' sx={{ marginTop: '3rem', marginBottom: '1rem' }}>
+      <Typography
+        variant='h5'
+        component='h3'
+        sx={{ marginTop: '3rem', marginBottom: '1rem' }}
+      >
         {contents.contact.title}
       </Typography>
       <Contact />

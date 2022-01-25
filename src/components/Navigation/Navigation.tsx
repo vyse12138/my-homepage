@@ -1,16 +1,18 @@
 import { useContext, useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
-import { GlobalContext } from '../../App'
+import { AnimatePresence, motion } from 'framer-motion'
+import { GlobalContext } from '../../pages/_app'
 import { useTheme } from '@mui/material/styles'
 import { Translate, DarkMode, LightMode } from '@mui/icons-material'
 import { Box, IconButton, Typography } from '@mui/material'
-import { cyan } from '@mui/material/colors'
 import { alpha } from '@mui/material/styles'
 import AnimateWrapper from '../../components/AnimateWrapper'
 import Logo from './src/Logo'
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { cyan } from '@mui/material/colors'
 
 export default function Navigation() {
+  const path = useRouter().pathname
   const theme = useTheme()
   const globalContext = useContext(GlobalContext)
   const [contents, setContents] = useState(
@@ -27,115 +29,141 @@ export default function Navigation() {
           : globalContext.contents.chinese.nav
       )
     }, 350)
-  }, [globalContext.english])
+  }, [
+    globalContext.contents.chinese.nav,
+    globalContext.contents.english.nav,
+    globalContext.english
+  ])
 
   return (
-    <Box
-      sx={{
-        width: '100%',
-        position: 'sticky',
-        top: '0',
-        left: '0',
-        backgroundColor: alpha(theme.palette.background.default, 0.6),
-        backdropFilter: 'blur(6px)',
-        zIndex: '1'
-      }}
-    >
-      <AnimateWrapper>
-        <Box
-          sx={{
-            display: 'flex',
-            width: '640px',
-            height: '56px',
-            m: 'auto',
-            alignItems: 'center',
-            [theme.breakpoints.down('sm')]: {
-              width: '90%'
-            }
-          }}
-        >
+    <AnimatePresence initial={false}>
+      <Box
+        sx={{
+          width: '100%',
+          position: 'sticky',
+          top: '0',
+          left: '0',
+          backgroundColor: alpha(theme.palette.background.default, 0.6),
+          backdropFilter: 'blur(6px)',
+          zIndex: '1'
+        }}
+      >
+        <AnimateWrapper>
           <Box
-            component={NavLink}
-            to='/'
             sx={{
-              flex: '',
-              textDecoration: 'none',
-              color: 'inherit',
-              marginRight: '50px'
+              display: 'flex',
+              width: '640px',
+              height: '56px',
+              m: 'auto',
+              alignItems: 'center',
+              [theme.breakpoints.down('sm')]: {
+                width: '90%'
+              }
             }}
           >
-            <Logo name={contents.name} />
-          </Box>
-          <NavLink
-            to='/projects'
-            style={({ isActive }) => {
-              return {
+            <Box
+              sx={{
+                flex: '',
                 textDecoration: 'none',
-                color: isActive ? 'black' : 'inherit',
+                color: 'inherit',
+                marginRight: '50px'
+              }}
+            >
+              <Link href='/'>
+                <a style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Logo name={contents.name} />
+                </a>
+              </Link>
+            </Box>
+
+            <Box
+              sx={{
                 padding: '4px',
                 marginRight: '10px',
-                backgroundColor: isActive ? cyan[200] : ''
-              }
-            }}
-          >
-            <motion.div whileHover={{ scale: 1.1 }}>
-              <Typography
-                sx={{
-                  '&:hover': {
-                    textDecoration: 'underline'
-                  }
-                }}
-              >
-                {contents.project}
-              </Typography>
-            </motion.div>
-          </NavLink>
-          <NavLink
-            to='/posts'
-            style={({ isActive }) => {
-              return {
-                textDecoration: 'none',
-                color: isActive ? 'black' : 'inherit',
-                padding: '4px',
-                backgroundColor: isActive ? cyan[200] : '',
-                '&:hover': {
-                  textDecoration: 'underline'
-                }
-              }
-            }}
-          >
-            <motion.div whileHover={{ scale: 1.1 }}>
-              <Typography
-                sx={{
-                  '&:hover': {
-                    textDecoration: 'underline'
-                  }
-                }}
-              >
-                {contents.post}
-              </Typography>
-            </motion.div>
-          </NavLink>
+                backgroundColor: path === '/projects' ? cyan[200] : '',
+                color: path === '/projects' ? 'black' : 'inherit',
+                border:
+                  path === '/projects'
+                    ? `2px solid ${cyan[600]}`
+                    : `2px solid transparent`
+              }}
+            >
+              <Link href='/projects'>
+                <a
+                  style={{
+                    textDecoration: 'none',
+                    color: 'inherit'
+                  }}
+                >
+                  <motion.div whileHover={{ scale: 1.1 }}>
+                    <Typography
+                      sx={{
+                        '&:hover': {
+                          textDecoration: 'underline'
+                        }
+                      }}
+                    >
+                      {contents.project}
+                    </Typography>
+                  </motion.div>
+                </a>
+              </Link>
+            </Box>
 
-          <IconButton
-            onClick={globalContext.toggleLanguage}
-            sx={{
-              marginLeft: 'auto',
-              color: 'inherit'
-            }}
-          >
-            <Translate />
-          </IconButton>
-          <IconButton
-            onClick={globalContext.toggleTheme}
-            sx={{
-              color: 'inherit'
-            }}
-          >
-            {theme.palette.mode === 'dark' ? <DarkMode /> : <LightMode />}
-          </IconButton>
-        </Box>
-      </AnimateWrapper>
-    </Box>
+            <Box
+              sx={{
+                padding: '4px',
+                marginRight: '10px',
+                backgroundColor: path === '/posts' ? cyan[200] : '',
+                color: path === '/posts' ? 'black' : 'inherit',
+                border:
+                  path === '/posts'
+                    ? `2px solid ${cyan[600]}`
+                    : `2px solid transparent`
+              }}
+            >
+              <Link href='/posts'>
+                <a
+                  style={{
+                    textDecoration: 'none',
+                    color: 'inherit'
+                  }}
+                >
+                  <motion.div whileHover={{ scale: 1.1 }}>
+                    <Typography
+                      sx={{
+                        '&:hover': {
+                          textDecoration: 'underline'
+                        }
+                      }}
+                    >
+                      {contents.post}
+                    </Typography>
+                  </motion.div>
+                </a>
+              </Link>
+            </Box>
+
+            <IconButton
+              onClick={globalContext.toggleLanguage}
+              sx={{
+                marginLeft: 'auto',
+                color: 'inherit'
+              }}
+            >
+              <Translate />
+            </IconButton>
+            <IconButton
+              onClick={globalContext.toggleTheme}
+              sx={{
+                color: 'inherit'
+              }}
+            >
+              {theme.palette.mode === 'dark' ? <DarkMode /> : <LightMode />}
+            </IconButton>
+          </Box>
+        </AnimateWrapper>
+      </Box>
+    </AnimatePresence>
   )
 }

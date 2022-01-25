@@ -4,92 +4,75 @@ import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
-function easeOutCirc(x: number) {
-  return Math.sqrt(1 - Math.pow(x - 1, 4))
-}
-
 export default function Scene() {
   const container = useRef<HTMLElement>(null)
   const theme = useTheme()
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    // scene
     const scene = new THREE.Scene()
+    scene.add(new THREE.AmbientLight(0xcccccc, 1))
 
-    const loader = new GLTFLoader()
-    // "Voxel Dog" (https://skfb.ly/6W9QU) by Takuya is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
-    loader.load('./dog.glb', function (gltf) {
-      gltf.scene.position.y = -1.75
-      scene.add(gltf.scene)
-
-      const camera = new THREE.OrthographicCamera(-9, 9, 6, -6, 0.01, 50000)
-
-      camera.position.copy(
-        new THREE.Vector3(
-          20 * Math.sin(0.2 * Math.PI),
-          10,
-          20 * Math.cos(0.2 * Math.PI)
-        )
-      )
-      const renderer = new THREE.WebGLRenderer({
-        antialias: true,
-        alpha: true
-      })
-      renderer.setPixelRatio(window.devicePixelRatio)
+    // renderer
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+    renderer.outputEncoding = THREE.sRGBEncoding
+    renderer.setPixelRatio(window.devicePixelRatio)
+    window.innerWidth < 600
+      ? renderer.setSize(360, 240)
+      : renderer.setSize(600, 400)
+    window.addEventListener('resize', () => {
       window.innerWidth < 600
-        ? renderer.setSize(
-            0.9 * window.innerWidth,
-            0.9 * (window.innerWidth / 3) * 2
-          )
+        ? renderer.setSize(360, 240)
         : renderer.setSize(600, 400)
-      renderer.outputEncoding = THREE.sRGBEncoding
+    })
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
-      scene.add(ambientLight)
-
-      const controls = new OrbitControls(camera, renderer.domElement)
-      controls.autoRotate = true
-      controls.target = new THREE.Vector3(0, 0, 0)
+    // model: "Voxel Dog" (https://skfb.ly/6W9QU) by Takuya is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+    new GLTFLoader().load('./dog.glb', function (model) {
+      model.scene.position.y = -1.75
+      scene.add(model.scene)
       setIsLoading(false)
-      if (container.current?.childNodes.length === 0) {
+
+      if (container.current) {
+        container.current.firstChild &&
+          container.current.removeChild(container.current.firstChild)
         container.current.appendChild(renderer.domElement)
-      } else if (container.current?.childNodes.length === 1) {
-        container.current.removeChild(container.current?.firstChild as Node)
-        container.current.appendChild(renderer.domElement)
-      }
-      let req: number
-      let frame = 0
-      const animate = function () {
-        req = requestAnimationFrame(animate)
-        frame = frame <= 100 ? frame + 1 : frame
-        if (frame < 100) {
-          const p = new THREE.Vector3(
-            20 * Math.sin(0.2 * Math.PI),
-            10,
-            20 * Math.cos(0.2 * Math.PI)
-          )
-          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
-          camera.position.x =
-            p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
-          camera.position.z =
-            p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
-          camera.lookAt(new THREE.Vector3(0, 0, 0))
-        } else {
-          controls.update()
-        }
-
-        renderer.render(scene, camera)
-      }
-
-      animate()
-
-      return () => {
-        console.log('unmount')
-        cancelAnimationFrame(req)
-        renderer.dispose()
       }
     })
+
+    // camera
+    const camera = new THREE.OrthographicCamera(-9, 9, 6, -6, 0.01, 50000)
+    camera.position.y = 10
+
+    // control
+    const controls = new OrbitControls(camera, renderer.domElement)
+    controls.autoRotate = true
+    controls.target = new THREE.Vector3(0, 0, 0)
+
+    // animation
+    let time = 0
+    ;(function animate() {
+      requestAnimationFrame(animate)
+      if (time < 120 && time++) {
+        const speed = Math.pow(120 - time, 3) / 32500
+
+        camera.position.x =
+          20 * Math.sin(0.2 * Math.PI) * Math.cos(speed) +
+          20 * Math.cos(0.2 * Math.PI) * Math.sin(speed)
+        camera.position.z =
+          20 * Math.cos(0.2 * Math.PI) * Math.cos(speed) -
+          20 * Math.sin(0.2 * Math.PI) * Math.sin(speed)
+      }
+
+      controls.update()
+      renderer.render(scene, camera)
+    })()
+
+    return () => {
+      renderer.dispose()
+    }
   }, [])
+
   return (
     <>
       {isLoading ? (

@@ -1,38 +1,41 @@
 import { useTheme } from '@mui/material/styles'
 import { Box } from '@mui/material'
-import LogoDark from '../../../static/images/footprint-dark.png'
-import LogoLight from '../../../static/images/footprint.png'
 import Typography from '@mui/material/Typography'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Logo({ name }: { name: String }) {
   const theme = useTheme()
   return (
-    <Box
-      sx={{
-        fontSize: '18px'
-      }}
-    >
-      <Typography variant='h5'>
-        <motion.div whileHover={{ scale: 1.2 }}>
-          <Box
-            sx={{
-              display: 'inline',
-              [theme.breakpoints.down('xs')]: {
-                display: 'none'
-              }
-            }}
-          >
-            {theme.palette.mode === 'dark' ? (
-              <img src={LogoDark} alt='logo' width='20' />
-            ) : (
-              <img src={LogoLight} alt='logo' width='20' />
-            )}
-          </Box>
+    <Typography variant='h5' component='h1' className='logo'>
+      <motion.div whileHover={{ scale: 1.2 }}>
+        <Box
+          sx={{
+            display: 'inline',
+            [theme.breakpoints.down('xs')]: {
+              display: 'none'
+            }
+          }}
+        >
+          {theme.palette.mode === 'dark' ? (
+            <Image
+              src='/images/footprint-dark.png'
+              alt='logo'
+              height='20'
+              width='20'
+            />
+          ) : (
+            <Image
+              src='/images/footprint.png'
+              alt='logo'
+              height='20'
+              width='20'
+            />
+          )}
+        </Box>
 
-          {name}
-        </motion.div>
-      </Typography>
-    </Box>
+        {name}
+      </motion.div>
+    </Typography>
   )
 }
