@@ -8,6 +8,7 @@ import '../index.css'
 import Scene from '../components/Scene'
 import Navigation from '../components/Navigation'
 import { AnimatePresence } from 'framer-motion'
+import Head from 'next/head'
 
 export const GlobalContext = createContext({
   toggleTheme: () => {},
@@ -61,6 +62,14 @@ export default function App({ Component, pageProps, router }: AppProps) {
 
   return (
     <>
+      <Head>
+        {' '}
+        <meta
+          name='description'
+          content="Yulei's Homepage. You can find my bio and contact info here, I'll also update my projects and posts here regularly. 小诸的个人主页。这里有我的简介和联系方式，我也会经常在这儿更新自己的文章以及项目。"
+        />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      </Head>
       <GlobalContext.Provider value={globalContext}>
         <ThemeProvider theme={theme}>
           <Box

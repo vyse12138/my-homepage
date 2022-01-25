@@ -18,14 +18,12 @@ export default function Scene() {
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     renderer.outputEncoding = THREE.sRGBEncoding
     renderer.setPixelRatio(window.devicePixelRatio)
-    window.innerWidth < 600
-      ? renderer.setSize(0.9 * window.innerWidth, 0.6 * window.innerWidth)
+    window.screen.availWidth < 600
+      ? renderer.setSize(
+          0.9 * window.screen.availWidth,
+          0.6 * window.screen.availWidth
+        )
       : renderer.setSize(600, 400)
-    window.addEventListener('resize', () => {
-      window.innerWidth < 600
-        ? renderer.setSize(0.9 * window.innerWidth, 0.6 * window.innerWidth)
-        : renderer.setSize(600, 400)
-    })
 
     // model: "Voxel Dog" (https://skfb.ly/6W9QU) by Takuya is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
     new GLTFLoader().load('./dog.glb', function (model) {
@@ -38,6 +36,25 @@ export default function Scene() {
           container.current.removeChild(container.current.firstChild)
         container.current.appendChild(renderer.domElement)
       }
+
+      // animation
+      let time = 0
+      ;(function animate() {
+        requestAnimationFrame(animate)
+        if (time < 120 && time++) {
+          const speed = Math.pow(120 - time, 3) / 32500
+
+          camera.position.x =
+            20 * Math.sin(0.2 * Math.PI) * Math.cos(speed) +
+            20 * Math.cos(0.2 * Math.PI) * Math.sin(speed)
+          camera.position.z =
+            20 * Math.cos(0.2 * Math.PI) * Math.cos(speed) -
+            20 * Math.sin(0.2 * Math.PI) * Math.sin(speed)
+        }
+
+        controls.update()
+        renderer.render(scene, camera)
+      })()
     })
 
     // camera
@@ -48,25 +65,6 @@ export default function Scene() {
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.autoRotate = true
     controls.target = new THREE.Vector3(0, 0, 0)
-
-    // animation
-    let time = 0
-    ;(function animate() {
-      requestAnimationFrame(animate)
-      if (time < 120 && time++) {
-        const speed = Math.pow(120 - time, 3) / 32500
-
-        camera.position.x =
-          20 * Math.sin(0.2 * Math.PI) * Math.cos(speed) +
-          20 * Math.cos(0.2 * Math.PI) * Math.sin(speed)
-        camera.position.z =
-          20 * Math.cos(0.2 * Math.PI) * Math.cos(speed) -
-          20 * Math.sin(0.2 * Math.PI) * Math.sin(speed)
-      }
-
-      controls.update()
-      renderer.render(scene, camera)
-    })()
 
     return () => {
       renderer.dispose()

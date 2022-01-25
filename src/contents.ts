@@ -16,7 +16,7 @@ const contents = {
       bio: {
         title: 'Bio',
         sections: [
-          "I started my uni journey at Swinburne University of Technology (SUT) in 2018, with a bachelor of Software Engineering (Honours) (professional) degree, and I'm goning to graduate from Uni at the end of 2022.",
+          "I started my uni journey at Swinburne University of Technology in 2018, with a bachelor of Software Engineering (Honours) (professional) degree, and I'm goning to graduate from Uni at the end of 2022.",
           "In the third year of my uni, I found out that front-end development is what I'm passionate about and did some further study in the front-end area, then I got an internship opportunity as a front-end developer at Agriview. And in the next year, I accepted a 12-month placement offer as a full-stack developer at Movember."
         ]
       },
@@ -93,7 +93,7 @@ const contents = {
           img: '/images/okcode.png',
           title: 'OKCode',
           description:
-            "My final year software development project, OKCode is a code analysis and visualize tool that also provides improvement suggestion. It targets to improve first-year SUT(my uni) students' code quality.",
+            "My final year software development project, OKCode is a code analysis and visualize tool that also provides improvement suggestion. It targets to improve first-year Swinburne students' code quality.",
           preview: '',
           source: ''
         },
