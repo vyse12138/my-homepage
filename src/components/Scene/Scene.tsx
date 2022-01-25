@@ -33,6 +33,7 @@ export default function Scene() {
     new GLTFLoader().load('./dog.glb', function (model) {
       model.scene.position.y = -1.75
       scene.add(model.scene)
+
       setIsLoading(false)
 
       if (container.current) {
@@ -82,13 +83,9 @@ export default function Scene() {
           sx={{
             display: 'flex',
             minHeight:
-              window.screen.availWidth < 400
+              window.screen.availWidth < 600
                 ? 0.6 * window.screen.availWidth
                 : 400,
-            minWidth:
-              window.screen.availWidth < 600
-                ? 0.9 * window.screen.availWidth
-                : 600,
             alignItems: 'center',
             justifyContent: 'center',
             flexDirection: 'column',
@@ -100,8 +97,10 @@ export default function Scene() {
         >
           <CircularProgress />
         </Box>
+      ) : isLoading === false ? (
+        <Box sx={{}} ref={container}></Box>
       ) : (
-        isLoading === false && <Box sx={{}} ref={container}></Box>
+        <Box sx={{ minHeight: 400 }}></Box>
       )}
     </>
   )
