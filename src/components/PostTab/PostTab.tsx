@@ -113,6 +113,7 @@ export default function PostTab({
               width='288px'
               className='br-10'
               alt={title}
+              priority
             />
             <Typography
               variant='h6'

@@ -16,6 +16,7 @@ export default function Logo({ name }: { name: String }) {
               alt='logo'
               height='22'
               width='22'
+              priority
             />
           ) : (
             <Image
@@ -23,6 +24,7 @@ export default function Logo({ name }: { name: String }) {
               alt='logo'
               height='22'
               width='22'
+              priority
             />
           )}
         </Box>

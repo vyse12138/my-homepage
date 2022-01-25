@@ -129,6 +129,7 @@ export default function ProjectTab({
               width='288px'
               className='br-10'
               alt={title}
+              priority
             />
             <Typography
               variant='h6'

@@ -51,7 +51,13 @@ export default function Intro() {
       {/* Name */}
       <Typography variant='h4' sx={{ marginBottom: '1rem' }} component='h2'>
         {contents.title}{' '}
-        <Image src='/images/Hi.gif' height='40px' width='40px' alt='Hi'></Image>
+        <Image
+          src='/images/Hi.gif'
+          height='40px'
+          width='40px'
+          alt='Hi'
+          priority
+        ></Image>
       </Typography>
       <Typography sx={{ marginBottom: '3rem' }}>{contents.role}</Typography>
       {/* Bio */}

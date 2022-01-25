@@ -62,6 +62,7 @@ export default function Contact() {
             height='24px'
             width='24px'
             alt='juejin'
+            priority
           />
         ) : (
           <Image
@@ -69,6 +70,7 @@ export default function Contact() {
             height='24px'
             width='24px'
             alt='juejin'
+            priority
           />
         )}
         <Box sx={{ paddingRight: '5px' }} /> @小诸不是小猪
