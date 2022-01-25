@@ -45,7 +45,8 @@ export default function ProjectTab({
                   ? '3px 3px 10px 3px rgb(180 180 180 / 20%)'
                   : ' 3px 3px 10px 3px rgb(0 0 0 / 20%)',
               padding: '1rem',
-              boxSizing: 'border-box'
+              boxSizing: 'border-box',
+              borderRadius: '10px'
             }}
           >
             <Box
@@ -114,6 +115,7 @@ export default function ProjectTab({
               marginBottom: '2rem',
               border: 'none',
               cursor: 'pointer',
+              borderRadius: '10px',
               boxShadow:
                 theme.palette.mode === 'dark'
                   ? '3px 3px 10px 3px rgb(180 180 180 / 20%)'
@@ -126,6 +128,7 @@ export default function ProjectTab({
               height='163px'
               width='288px'
               alt={title}
+              className='br-10'
               placeholder='blur'
             />
             <Typography

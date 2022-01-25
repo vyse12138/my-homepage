@@ -8,6 +8,11 @@ body {
 .logo img {
   transition: 300ms ease;
 }
+
 .logo:hover img {
   transform: rotate(20deg);
+}
+
+.br-10 {
+  border-radius: 10px 10px 0px 0px;
 }
