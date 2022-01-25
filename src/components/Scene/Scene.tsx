@@ -19,11 +19,11 @@ export default function Scene() {
     renderer.outputEncoding = THREE.sRGBEncoding
     renderer.setPixelRatio(window.devicePixelRatio)
     window.innerWidth < 600
-      ? renderer.setSize(360, 240)
+      ? renderer.setSize(0.9 * window.innerWidth, 0.6 * window.innerWidth)
       : renderer.setSize(600, 400)
     window.addEventListener('resize', () => {
       window.innerWidth < 600
-        ? renderer.setSize(360, 240)
+        ? renderer.setSize(0.9 * window.innerWidth, 0.6 * window.innerWidth)
         : renderer.setSize(600, 400)
     })
 

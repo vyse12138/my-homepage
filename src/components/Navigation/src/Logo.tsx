@@ -7,35 +7,38 @@ import Image from 'next/image'
 export default function Logo({ name }: { name: String }) {
   const theme = useTheme()
   return (
-    <Typography variant='h5' component='h1' className='logo'>
+    <Box className='logo'>
       <motion.div whileHover={{ scale: 1.2 }}>
-        <Box
-          sx={{
-            display: 'inline',
-            [theme.breakpoints.down('xs')]: {
-              display: 'none'
-            }
-          }}
-        >
+        <Box sx={{ display: 'inline' }}>
           {theme.palette.mode === 'dark' ? (
             <Image
               src='/images/footprint-dark.png'
               alt='logo'
-              height='20'
-              width='20'
+              height='22'
+              width='22'
             />
           ) : (
             <Image
               src='/images/footprint.png'
               alt='logo'
-              height='20'
-              width='20'
+              height='22'
+              width='22'
             />
           )}
         </Box>
-
-        {name}
+        <Typography
+          variant='h5'
+          component='h1'
+          sx={{
+            display: 'inline',
+            [theme.breakpoints.down('sm')]: {
+              display: 'none'
+            }
+          }}
+        >
+          {name}
+        </Typography>
       </motion.div>
-    </Typography>
+    </Box>
   )
 }
