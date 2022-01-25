@@ -9,6 +9,7 @@ import Scene from '../components/Scene'
 import Navigation from '../components/Navigation'
 import { AnimatePresence } from 'framer-motion'
 import Head from 'next/head'
+import Footer from '../components/Footer'
 
 export const GlobalContext = createContext({
   toggleTheme: () => {},
@@ -87,6 +88,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
             <AnimatePresence exitBeforeEnter initial={false}>
               <Component {...pageProps} key={router.route} />
             </AnimatePresence>
+            <Footer />
           </Box>
         </ThemeProvider>
       </GlobalContext.Provider>

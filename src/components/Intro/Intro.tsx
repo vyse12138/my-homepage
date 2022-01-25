@@ -15,7 +15,6 @@ import { LocationOn, Work } from '@mui/icons-material'
 import Tech from './src/Tech'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import hi from '../../../public/images/Hi.gif'
 
 export default function Intro() {
   const theme = useTheme()
@@ -52,7 +51,7 @@ export default function Intro() {
       {/* Name */}
       <Typography variant='h4' sx={{ marginBottom: '1rem' }} component='h2'>
         {contents.title}{' '}
-        <Image src={hi} height='40px' width='40px' alt='Hi'></Image>
+        <Image src='/images/Hi.gif' height='40px' width='40px' alt='Hi' />
       </Typography>
       <Typography sx={{ marginBottom: '3rem' }}>{contents.role}</Typography>
       {/* Bio */}
