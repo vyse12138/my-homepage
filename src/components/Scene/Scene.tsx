@@ -78,10 +78,7 @@ export default function Scene() {
         <Box
           sx={{
             display: 'flex',
-            minHeight:
-              window.screen.availWidth < 600
-                ? 0.6 * window.screen.availWidth
-                : 400,
+            minHeight: 400,
             alignItems: 'center',
             justifyContent: 'center',
             flexDirection: 'column',
