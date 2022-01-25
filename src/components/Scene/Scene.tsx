@@ -7,11 +7,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 export default function Scene() {
   const container = useRef<HTMLElement>(null)
   const theme = useTheme()
-  const [isLoading, setIsLoading] = useState<boolean | null>(null)
-
-  useEffect(() => {
-    setIsLoading(true)
-  }, [])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     // scene
@@ -78,7 +74,7 @@ export default function Scene() {
 
   return (
     <>
-      {isLoading === true ? (
+      {isLoading ? (
         <Box
           sx={{
             display: 'flex',
@@ -97,10 +93,8 @@ export default function Scene() {
         >
           <CircularProgress />
         </Box>
-      ) : isLoading === false ? (
-        <Box sx={{}} ref={container}></Box>
       ) : (
-        <Box sx={{ minHeight: 400 }}></Box>
+        <Box sx={{}} ref={container}></Box>
       )}
     </>
   )
