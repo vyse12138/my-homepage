@@ -5,14 +5,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.br-10 {
-  border-radius:  10px 10px  0px 0px;
-}
-
-.logo img{
-    transition: 300ms ease;
+.logo img {
+  transition: 300ms ease;
 }
 .logo:hover img {
   transform: rotate(20deg);
-  
 }

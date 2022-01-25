@@ -68,7 +68,7 @@ export default function Project() {
             {contents.sections.map(project => (
               <ProjectTab
                 img={project.img}
-                key={project.img}
+                key={project.id}
                 title={project.title}
                 description={project.description}
                 preview={project.preview}

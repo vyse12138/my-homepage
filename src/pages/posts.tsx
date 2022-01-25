@@ -68,7 +68,7 @@ export default function Posts() {
             {contents.sections.map(post => (
               <PostTab
                 img={post.img}
-                key={post.img}
+                key={post.id}
                 title={post.title}
                 description={post.description}
                 preview={post.preview}

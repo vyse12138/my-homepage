@@ -8,6 +8,16 @@ import {
   MenuBook
 } from '@mui/icons-material'
 
+import mc from '../public/images/mc.png'
+import okcode from '../public/images/okcode.png'
+import cocktail from '../public/images/cocktail.png'
+import home from '../public/images/home.jpg'
+
+import algo from '../public/images/algo.png'
+import basis from '../public/images/basis.png'
+import css from '../public/images/css.png'
+import mo from '../public/images/mo.png'
+
 const contents = {
   english: {
     intro: {
@@ -82,7 +92,8 @@ const contents = {
       title: 'Projects',
       sections: [
         {
-          img: '/images/mc.png',
+          id: 'mc',
+          img: mc,
           title: 'Minecraft Clone',
           description:
             'Try out the web-based Minecraft clone! It support placing/destroying blocks and dynamic/random terrain generation.',
@@ -90,7 +101,8 @@ const contents = {
           source: 'https://github.com/Vyse12138/three-minecraft'
         },
         {
-          img: '/images/okcode.png',
+          id: 'okcode',
+          img: okcode,
           title: 'OKCode',
           description:
             "My final year software development project, OKCode is a code analysis and visualize tool that also provides improvement suggestion. It targets to improve first-year Swinburne students' code quality.",
@@ -98,7 +110,8 @@ const contents = {
           source: ''
         },
         {
-          img: '/images/cocktail.png',
+          id: 'cocktail',
+          img: cocktail,
           title: 'Cocktail Recipes',
           description:
             'Search for your favorite cocktail recipes and make a drink yourself.',
@@ -106,7 +119,8 @@ const contents = {
           source: 'https://github.com/Vyse12138/cocktail-recipes'
         },
         {
-          img: '/images/home.jpg',
+          id: 'home',
+          img: home,
           title: 'My Homepage',
           description:
             "This is my homepage, you can find my bio and contact info here, I'll also update my projects and posts here regularly.",
@@ -119,14 +133,16 @@ const contents = {
       title: 'Posts',
       sections: [
         {
-          img: '/images/algo.png',
+          id: 'algo',
+          img: algo,
           title: 'Algorithms',
           description:
             'Reading notes on Algorithms, 4th edition. Implementing algorithms in TypeScript including sort, search, graph etc.',
           preview: 'https://github.com/Vyse12138/algorithms-4th-edition'
         },
         {
-          img: '/images/basis.png',
+          id: 'basis',
+          img: basis,
           title: 'JavaScript Basis',
           description:
             'Reading notes on JavaScript: The Definitive Guide, 7th Edition. Including pretty much everything we need to know about JavaScript.',
@@ -134,14 +150,16 @@ const contents = {
             'https://vyse12138.github.io/javascript-the-definitive-guide/#/'
         },
         {
-          img: '/images/css.png',
+          id: 'css',
+          img: css,
           title: 'CSS Selectors',
           description:
             "What's CSS selectors? What's pseudo elements and pseudo classes? Here's all you need to know about the CSS selectors.",
           preview: 'https://juejin.cn/post/6956856972004032520'
         },
         {
-          img: '/images/mo.png',
+          id: 'mo',
+          img: mo,
           title: 'Map vs Object',
           description:
             "Should we use Map or Object when developing JavaScript project? What's the difference and why?",
@@ -222,7 +240,8 @@ const contents = {
       title: '项目',
       sections: [
         {
-          img: '/images/mc.png',
+          id: 'homcme',
+          img: mc,
           title: '我的世界网页版',
           description:
             '来试一下网页版的简易我的世界吧，支持方块放置/破坏，动态/随机生成地形。',
@@ -230,7 +249,8 @@ const contents = {
           source: 'https://github.com/Vyse12138/three-minecraft'
         },
         {
-          img: '/images/okcode.png',
+          id: 'okcode',
+          img: okcode,
           title: 'OKCode',
           description:
             '我的毕业设计 OKCode 是一个代码复杂度分析软件。分析输入代码并给予相应的改进建议，目标是为 SUT（我的大学）大一的学生提高代码质量。',
@@ -238,14 +258,16 @@ const contents = {
           source: ''
         },
         {
-          img: '/images/cocktail.png',
+          id: 'cocktail',
+          img: cocktail,
           title: '调酒菜单',
           description: '找到你最喜欢的鸡尾酒，然后看看它是怎么调出来的吧。',
           preview: 'https://drink.yuleiz.com',
           source: 'https://github.com/Vyse12138/cocktail-recipes'
         },
         {
-          img: '/images/home.jpg',
+          id: 'home',
+          img: home,
           title: '个人主页',
           description:
             '这里是我的个人主页，有我的简介和联系方式，我也会经常在这儿更新自己的文章以及项目。',
@@ -258,14 +280,16 @@ const contents = {
       title: '文章',
       sections: [
         {
-          img: '/images/algo.png',
+          id: 'algo',
+          img: algo,
           title: '算法笔记',
           description:
             '算法第四版阅读笔记。用 TypeScript 编写各种算法比如：排序，查找，有向图，无向图等。',
           preview: 'https://github.com/Vyse12138/algorithms-4th-edition'
         },
         {
-          img: '/images/basis.png',
+          id: 'basis',
+          img: basis,
           title: 'JavaScript 基础',
           description:
             'JavaScript 权威指南第七版阅读笔记。涵盖几乎所有 JavaScript 基础知识。',
@@ -274,14 +298,16 @@ const contents = {
         },
 
         {
-          img: '/images/css.png',
+          id: 'css',
+          img: css,
           title: 'CSS 选择器',
           description:
             '什么是 CSS 选择器？权重该如何计算？什么又是伪类和伪元素？让我们一起来看看吧。',
           preview: 'https://juejin.cn/post/6956856972004032520'
         },
         {
-          img: '/images/mo.png',
+          id: 'mo',
+          img: mo,
           title: 'Map 还是 Object',
           description:
             '在日常的 JavaScript 项目中，我们究竟应该使用 Object 还是 Map？他们有什么区别？什么情况下该选什么？',

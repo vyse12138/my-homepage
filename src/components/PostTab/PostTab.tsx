@@ -10,7 +10,7 @@ export default function PostTab({
   description,
   preview
 }: {
-  img: string
+  img: StaticImageData
   title: string
   description: string
   preview: string
@@ -35,14 +35,13 @@ export default function PostTab({
             onClick={handleClick}
             sx={{
               width: '288px',
-              height: '227px',
+              height: '232px',
               marginBottom: '2rem',
               backgroundColor: 'background.paper',
               boxShadow:
                 theme.palette.mode === 'dark'
-                  ? ' 0 10px 16px 0 rgb(180 180 180 / 20%), 0 6px 20px 0 rgb(180 180 180 / 19%)'
-                  : ' 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)',
-              borderRadius: '10px',
+                  ? '3px 3px 10px 3px rgb(180 180 180 / 20%)'
+                  : ' 3px 3px 10px 3px rgb(0 0 0 / 20%)',
               padding: '1rem',
               boxSizing: 'border-box'
             }}
@@ -99,11 +98,10 @@ export default function PostTab({
               marginBottom: '2rem',
               border: 'none',
               cursor: 'pointer',
-              borderRadius: '10px',
               boxShadow:
                 theme.palette.mode === 'dark'
-                  ? ' 0 10px 16px 0 rgb(180 180 180 / 20%), 0 6px 20px 0 rgb(180 180 180 / 19%)'
-                  : ' 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)'
+                  ? '3px 3px 10px 3px rgb(180 180 180 / 20%)'
+                  : ' 3px 3px 10px 3px rgb(0 0 0 / 20%)'
             }}
           >
             <Image
@@ -111,9 +109,8 @@ export default function PostTab({
               src={img}
               height='163px'
               width='288px'
-              className='br-10'
               alt={title}
-              priority
+              placeholder='blur'
             />
             <Typography
               variant='h6'

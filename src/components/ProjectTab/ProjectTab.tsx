@@ -11,7 +11,7 @@ export default function ProjectTab({
   preview,
   source
 }: {
-  img: string
+  img: StaticImageData
   title: string
   description: string
   preview: string
@@ -42,9 +42,8 @@ export default function ProjectTab({
               backgroundColor: 'background.paper',
               boxShadow:
                 theme.palette.mode === 'dark'
-                  ? ' 0 10px 16px 0 rgb(166 166 166 / 20%), 0 6px 20px 0 rgb(166 166 166 / 19%)'
-                  : ' 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)',
-              borderRadius: '10px',
+                  ? '3px 3px 10px 3px rgb(180 180 180 / 20%)'
+                  : ' 3px 3px 10px 3px rgb(0 0 0 / 20%)',
               padding: '1rem',
               boxSizing: 'border-box'
             }}
@@ -115,11 +114,10 @@ export default function ProjectTab({
               marginBottom: '2rem',
               border: 'none',
               cursor: 'pointer',
-              borderRadius: '10px',
               boxShadow:
                 theme.palette.mode === 'dark'
-                  ? ' 0 10px 16px 0 rgb(180 180 180 / 20%), 0 6px 20px 0 rgb(180 180 180 / 19%)'
-                  : ' 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)'
+                  ? '3px 3px 10px 3px rgb(180 180 180 / 20%)'
+                  : ' 3px 3px 10px 3px rgb(0 0 0 / 20%)'
             }}
           >
             <Image
@@ -127,9 +125,8 @@ export default function ProjectTab({
               src={img}
               height='163px'
               width='288px'
-              className='br-10'
               alt={title}
-              priority
+              placeholder='blur'
             />
             <Typography
               variant='h6'
