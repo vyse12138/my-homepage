@@ -13,9 +13,15 @@ export default function Logo({ name }: { name: String }) {
       <motion.div whileHover={{ scale: 1.2 }}>
         <Box sx={{ display: 'inline' }}>
           {theme.palette.mode === 'dark' ? (
-            <Image src={footprintDark} alt='logo' height='22' width='22' />
+            <Image
+              src={footprintDark}
+              alt='logo'
+              height='22'
+              width='22'
+              priority
+            />
           ) : (
-            <Image src={footprint} alt='logo' height='22' width='22' />
+            <Image src={footprint} alt='logo' height='22' width='22' priority />
           )}
         </Box>
         <Typography

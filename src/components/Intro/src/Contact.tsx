@@ -64,10 +64,16 @@ export default function Contact() {
             height='24px'
             width='24px'
             alt='juejin'
-            className='red'
+            priority
           />
         ) : (
-          <Image src={juejin} height='24px' width='24px' alt='juejin' />
+          <Image
+            src={juejin}
+            height='24px'
+            width='24px'
+            alt='juejin'
+            priority
+          />
         )}
         <Box sx={{ paddingRight: '5px' }} /> @小诸不是小猪
       </Link>

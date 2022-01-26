@@ -37,7 +37,7 @@ export default function ProjectTab({
             onClick={handleClick}
             sx={{
               width: '288px',
-              height: '227px',
+              height: '232px',
               marginBottom: '2rem',
               backgroundColor: 'background.paper',
               boxShadow:

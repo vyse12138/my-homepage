@@ -11,7 +11,7 @@ import {
 } from '@mui/material'
 import Contact from './src/Contact'
 import Interest from './src/Interest'
-import { LocationOn, Work } from '@mui/icons-material'
+import { Favorite, LocationOn, Work } from '@mui/icons-material'
 import Tech from './src/Tech'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -49,9 +49,19 @@ export default function Intro() {
       }}
     >
       {/* Name */}
-      <Typography variant='h4' sx={{ marginBottom: '1rem' }} component='h2'>
+      <Typography
+        variant='h4'
+        sx={{ marginBottom: '1rem', fontSize: '1.8rem' }}
+        component='h2'
+      >
         {contents.title}{' '}
-        <Image src='/images/Hi.gif' height='40px' width='40px' alt='Hi' />
+        <Image
+          src='/images/Hi.gif'
+          height='40px'
+          width='40px'
+          alt='Hi'
+          unoptimized
+        />
       </Typography>
       <Typography sx={{ marginBottom: '3rem' }}>{contents.role}</Typography>
       {/* Bio */}
@@ -140,11 +150,12 @@ export default function Intro() {
         sx={{ marginTop: '3rem', marginBottom: '1rem' }}
       >
         {contents.interest.title}{' '}
-        <Box
-          sx={{ display: 'inline', fontSize: '18px', verticalAlign: 'middle' }}
-        >
-          ♥
-        </Box>
+        <Favorite
+          sx={{
+            display: 'inline',
+            fontSize: '1.1rem'
+          }}
+        />
       </Typography>
       {contents.interest.sections.map(section => (
         <Interest
