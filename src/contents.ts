@@ -96,9 +96,9 @@ const contents = {
           img: mc,
           title: 'Minecraft Clone',
           description:
-            'Try out the web-based Minecraft clone! It support placing/destroying blocks and dynamic/random terrain generation.',
+            'Try out the Minecraft clone in your browser! It supports a lot of features from Minecraft, read more in my GitHub repository.',
           preview: 'https://mc.yuleiz.com',
-          source: 'https://github.com/Vyse12138/three-minecraft'
+          source: 'https://github.com/Vyse12138/minecraft-threejs'
         },
         {
           id: 'okcode',
@@ -244,9 +244,9 @@ const contents = {
           img: mc,
           title: '我的世界网页版',
           description:
-            '来试一下网页版的简易我的世界吧，支持方块放置/破坏，动态/随机生成地形。',
+            '来试一下网页版的 MC 吧，支持许多 MC 的特性，包括但不限于无限随机地形，丝滑的碰撞检测，保存读取机制...',
           preview: 'https://mc.yuleiz.com',
-          source: 'https://github.com/Vyse12138/three-minecraft'
+          source: 'https://github.com/Vyse12138/minecraft-threejs'
         },
         {
           id: 'okcode',
