@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
-import { Box, Typography, useTheme } from '@mui/material'
+import { Box, Link, Typography, useTheme } from '@mui/material'
 import AnimateWrapper from '../components/AnimateWrapper'
 import PostTab from '../components/PostTab'
 import { GlobalContext } from '../pages/_app'
@@ -75,6 +75,20 @@ export default function Posts() {
               />
             ))}
           </Box>
+          {contents.more && (
+            <Typography sx={{ marginTop: '10px' }}>
+              或者在掘金上阅读更多：
+              <Link
+                href='https://juejin.cn/user/1407794523416350/posts'
+                target='_blank'
+                sx={{
+                  display: 'inline'
+                }}
+              >
+                @小诸不是小猪
+              </Link>
+            </Typography>
+          )}
         </Box>
       </AnimateWrapper>
     </>

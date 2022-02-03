@@ -131,6 +131,7 @@ const contents = {
     },
     post: {
       title: 'Posts',
+      more: false,
       sections: [
         {
           id: 'algo',
@@ -278,6 +279,7 @@ const contents = {
     },
     post: {
       title: '文章',
+      more: true,
       sections: [
         {
           id: 'algo',
