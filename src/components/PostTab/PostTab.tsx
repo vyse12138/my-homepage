@@ -53,7 +53,7 @@ export default function PostTab({
               }}
             >
               {' '}
-              <Typography sx={{ marginBottom: '1rem' }}>
+              <Typography sx={{ marginBottom: '0.2rem' }}>
                 {description}
               </Typography>
               {preview && (

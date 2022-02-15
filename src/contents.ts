@@ -12,6 +12,8 @@ import mc from '../public/images/mc.png'
 import okcode from '../public/images/okcode.png'
 import cocktail from '../public/images/cocktail.png'
 import home from '../public/images/home.jpg'
+import aye from '../public/images/aye.jpg'
+import rp from '../public/images/rp.jpg'
 
 import algo from '../public/images/algo.png'
 import basis from '../public/images/basis.png'
@@ -26,7 +28,7 @@ const contents = {
       bio: {
         title: 'Bio',
         sections: [
-          "I started my uni journey at Swinburne University of Technology in 2018, with a bachelor of Software Engineering (Honours) (professional) degree, and I'm goning to graduate from Uni at the end of 2022.",
+          "I started my uni journey at Swinburne University of Technology in 2018, with a bachelor of Software Engineering (Honours) (professional) degree, and I'm going to graduate from Uni at the end of 2022.",
           "In the third year of my uni, I found out that front-end development is what I'm passionate about and did some further study in the front-end area, then I got an internship opportunity as a front-end developer at Agriview. And in the next year, I accepted a 12-month placement offer as a full-stack developer at Movember."
         ]
       },
@@ -126,6 +128,24 @@ const contents = {
             "This is my homepage, you can find my bio and contact info here, I'll also update my projects and posts here regularly.",
           preview: 'https://yuleiz.com',
           source: 'https://github.com/Vyse12138/yulei-homepage'
+        },
+        {
+          id: 'aye',
+          img: aye,
+          title: 'All Your Electronics',
+          description:
+            'A full-stack e-commercial website for electronic, include both user-end and admin-end, featured with login system and chat system.',
+          preview: '',
+          source: 'https://github.com/Vyse12138/all-your-electronics'
+        },
+        {
+          id: 'rp',
+          img: rp,
+          title: 'React Projects Collection',
+          description:
+            'Collection of small projects implemented in React. Including shopping buddy, tic-tac-toe, markdown editor etc.',
+          preview: 'https://react-projects.yuleiz.com/',
+          source: 'https://github.com/Vyse12138/react-projects'
         }
       ]
     },
@@ -241,7 +261,7 @@ const contents = {
       title: '项目',
       sections: [
         {
-          id: 'homcme',
+          id: 'mc',
           img: mc,
           title: '我的世界网页版',
           description:
@@ -274,6 +294,24 @@ const contents = {
             '这里是我的个人主页，有我的简介和联系方式，我也会经常在这儿更新自己的文章以及项目。',
           preview: 'https://yuleiz.com',
           source: 'https://github.com/Vyse12138/yulei-homepage'
+        },
+        {
+          id: 'aye',
+          img: aye,
+          title: 'All Your Electronics',
+          description:
+            '一个全栈电商网站，包含了用户界面，后台管理界面，登录系统，以及聊天功能。',
+          preview: '',
+          source: 'https://github.com/Vyse12138/all-your-electronics'
+        },
+        {
+          id: 'rp',
+          img: rp,
+          title: 'React 小项目合集',
+          description:
+            '一些 React 小项目合集，包含了记事本，井字棋，markdown 编辑器等。',
+          preview: 'https://react-projects.yuleiz.com/',
+          source: 'https://github.com/Vyse12138/react-projects'
         }
       ]
     },
