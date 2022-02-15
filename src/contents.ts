@@ -266,7 +266,7 @@ const contents = {
           title: '我的世界网页版',
           description:
             '来试一下网页版的 MC 吧，支持许多 MC 的特性，包括但不限于无限随机地形，丝滑的碰撞检测，保存读取机制...',
-          preview: 'https://mc.yuleiz.com',
+          preview: 'https://mc-zh.yuleiz.com',
           source: 'https://github.com/Vyse12138/minecraft-threejs'
         },
         {
