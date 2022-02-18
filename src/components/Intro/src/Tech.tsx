@@ -41,8 +41,14 @@ export default function Tech({ name, point }: { name: string; point: number }) {
           color='inherit'
           value={100}
           size={30}
+          aria-label='10'
         />
-        <CircularProgress variant='determinate' value={point * 10} size={30} />
+        <CircularProgress
+          variant='determinate'
+          value={point * 10}
+          size={30}
+          aria-label={`${point}`}
+        />
         <Box
           sx={{
             top: 0,

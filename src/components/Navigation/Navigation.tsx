@@ -150,6 +150,7 @@ export default function Navigation() {
                 marginLeft: 'auto',
                 color: 'inherit'
               }}
+              aria-label='change language'
             >
               <Translate />
             </IconButton>
@@ -158,6 +159,7 @@ export default function Navigation() {
               sx={{
                 color: 'inherit'
               }}
+              aria-label='change theme'
             >
               {theme.palette.mode === 'dark' ? <DarkMode /> : <LightMode />}
             </IconButton>

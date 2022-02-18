@@ -13,6 +13,7 @@ export default function Contact() {
       <Link
         href='https://github.com/Vyse12138'
         target='_blank'
+        rel='noopener'
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -33,6 +34,7 @@ export default function Contact() {
       <Link
         href='https://www.linkedin.com/in/yulei-zhu-902193195/'
         target='_blank'
+        rel='noopener'
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -50,8 +52,9 @@ export default function Contact() {
       <br />
 
       <Link
-        href='https://juejin.cn/user/1407794523416350'
+        href='https://juejin.cn/user/1407794523416350/posts'
         target='_blank'
+        rel='noopener'
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -83,6 +86,7 @@ export default function Contact() {
       <Link
         href='mailto:yulei.zhu@outlook.com'
         target='_blank'
+        rel='noopener'
         sx={{
           display: 'flex',
           alignItems: 'center',
