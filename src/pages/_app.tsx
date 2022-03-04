@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useLayoutEffect, useState } from 'react'
 import { grey, orange } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { Box, ThemeProvider } from '@mui/material'
@@ -61,7 +61,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
     english
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // update language and theme on load
     setEnglish(!/^zh\b/.test(navigator.language))
     setDark(window.matchMedia('(prefers-color-scheme: dark)').matches)
