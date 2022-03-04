@@ -46,7 +46,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
   // Global language
   const [english, setEnglish] = useState<boolean>(
     // /^en\b/.test(navigator.language),
-    true
+    false
   )
 
   // Global context
