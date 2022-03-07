@@ -167,8 +167,7 @@ const contents = {
           title: 'JavaScript Basis',
           description:
             'Reading notes on JavaScript: The Definitive Guide, 7th Edition. Including pretty much everything we need to know about JavaScript.',
-          preview:
-            'https://vyse12138.github.io/javascript-the-definitive-guide/#/'
+          preview: 'https://js.yuleiz.com/'
         },
         {
           id: 'css',
@@ -333,8 +332,7 @@ const contents = {
           title: 'JavaScript 基础',
           description:
             'JavaScript 权威指南第七版阅读笔记。涵盖几乎所有 JavaScript 基础知识。',
-          preview:
-            'https://vyse12138.github.io/javascript-the-definitive-guide/#/'
+          preview: 'https://js.yuleiz.com/'
         },
 
         {
