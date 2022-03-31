@@ -14,6 +14,7 @@ import cocktail from '../public/images/cocktail.png'
 import home from '../public/images/home.jpg'
 import aye from '../public/images/aye.jpg'
 import rp from '../public/images/rp.jpg'
+import zen from '../public/images/zen.jpg'
 
 import algo from '../public/images/algo.png'
 import basis from '../public/images/basis.png'
@@ -101,6 +102,14 @@ const contents = {
             'Try out the Minecraft clone in your browser! It supports a lot of features from Minecraft, read more in my GitHub repository.',
           preview: 'https://mc.yuleiz.com',
           source: 'https://github.com/Vyse12138/minecraft-threejs'
+        },
+        {
+          id: 'zen',
+          img: zen,
+          title: 'Zen.js',
+          description: 'Zen is an open source 3D charting library for React',
+          preview: 'https://zen.yuleiz.com',
+          source: 'https://github.com/vyse12138/zen'
         },
         {
           id: 'okcode',
@@ -267,6 +276,15 @@ const contents = {
             '来试一下网页版的 MC 吧，支持许多 MC 的特性，包括但不限于无限随机地形，丝滑的碰撞检测，保存读取机制...',
           preview: 'https://mc-zh.yuleiz.com',
           source: 'https://github.com/Vyse12138/minecraft-threejs'
+        },
+        {
+          id: 'zen',
+          img: zen,
+          title: 'Zen.js',
+          description:
+            'Zen 是一款 3D 图表库, 旨在通过为传统 2D 图表多增加一个维度的方式来更为高效的展示更多数据, 并且更便于进行数据间的比较',
+          preview: 'https://zen.yuleiz.com',
+          source: 'https://github.com/vyse12138/zen'
         },
         {
           id: 'okcode',
