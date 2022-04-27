@@ -82,7 +82,10 @@ export default function App({ Component, pageProps, router }: AppProps) {
           property='og:description'
           content="You can find out my bio and contact info here, I'll also update my projects and posts here regularly."
         />
-        <meta property='og:image' content='/images/index.png' />
+        <meta
+          property='og:image'
+          content='https://yuleiz.com/images/index.png'
+        />
         <meta property='og:url' content='https://yuleiz.com/' />
       </Head>
       <GlobalContext.Provider value={globalContext}>
