@@ -1,4 +1,4 @@
-import { createContext, useLayoutEffect, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { grey, orange } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { Box, ThemeProvider } from '@mui/material'
@@ -61,7 +61,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
     english
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     // update language and theme on load
     setEnglish(!/^zh\b/.test(navigator.language))
     setDark(window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -74,9 +74,16 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <link rel='icon' href='/images/favicon.ico' />
         <meta
           name='description'
-          content="Yulei's Homepage. You can find my bio and contact info here, I'll also update my projects and posts here regularly. 小诸的个人主页。这里有我的简介和联系方式，我也会经常在这儿更新自己的文章以及项目。"
+          content="Yulei's Homepage. You can find out my bio and contact info here, I'll also update my projects and posts here regularly. 小诸的个人主页。这里有我的简介和联系方式，我也会经常在这儿更新自己的文章以及项目。"
         />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta property='og:title' content="Yulei's Homepage" />
+        <meta
+          property='og:description'
+          content="You can find out my bio and contact info here, I'll also update my projects and posts here regularly."
+        />
+        <meta property='og:image' content='/images/index.png' />
+        <meta property='og:url' content='https://yuleiz.com/' />
       </Head>
       <GlobalContext.Provider value={globalContext}>
         <ThemeProvider theme={theme}>
