@@ -29,7 +29,7 @@ const contents = {
       bio: {
         title: 'Bio',
         sections: [
-          "I'm a honor bachelor of software engineering student from Swinburne Uni and I'm going to graduate at the end of 2022.",
+          "I'm an honor bachelor of software engineering student from Swinburne Uni and I'm going to graduate at the end of 2022.",
           "During one elective course (Creating Web Application) in 2020, I found out that front-end development is what I'm passionate about. So I did some further study in the front-end area, and got an internship opportunity as a front-end developer at Agriview at the end of 2020. And in the next year, I accepted a 12-month placement offer as a full-stack developer at Movember."
         ]
       },
