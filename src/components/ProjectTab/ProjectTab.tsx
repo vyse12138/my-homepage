@@ -67,6 +67,9 @@ export default function ProjectTab({
                     alignItems: 'center',
                     width: 'max-content'
                   }}
+                  onClick={e => {
+                    e.stopPropagation()
+                  }}
                 >
                   <WebAsset sx={{ paddingRight: '5px' }} /> Preview
                 </Link>
@@ -79,6 +82,9 @@ export default function ProjectTab({
                     display: 'flex',
                     alignItems: 'center',
                     width: 'max-content'
+                  }}
+                  onClick={e => {
+                    e.stopPropagation()
                   }}
                 >
                   <GitHub sx={{ paddingRight: '5px' }} />{' '}

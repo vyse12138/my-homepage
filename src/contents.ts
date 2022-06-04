@@ -29,8 +29,8 @@ const contents = {
       bio: {
         title: 'Bio',
         sections: [
-          "I started my uni journey at Swinburne University of Technology in 2018, with a bachelor of Software Engineering (Honours) (professional) degree, and I'm going to graduate from Uni at the end of 2022.",
-          "In the third year of my uni, I found out that front-end development is what I'm passionate about and did some further study in the front-end area, then I got an internship opportunity as a front-end developer at Agriview. And in the next year, I accepted a 12-month placement offer as a full-stack developer at Movember."
+          "I'm a honor bachelor of software engineering student from Swinburne Uni and I'm going to graduate at the end of 2022.",
+          "During one elective course (Creating Web Application) in 2020, I found out that front-end development is what I'm passionate about. So I did some further study in the front-end area, and got an internship opportunity as a front-end developer at Agriview at the end of 2020. And in the next year, I accepted a 12-month placement offer as a full-stack developer at Movember."
         ]
       },
       work: {
@@ -199,13 +199,13 @@ const contents = {
   },
   chinese: {
     intro: {
-      title: '嗨，这里是小诸',
-      role: '学生 / 前端工程师 / 全栈工程师',
+      title: '嗨, 这里是小诸',
+      role: '学生 / 前端开发 / 全栈开发',
       bio: {
         title: '简介',
         sections: [
-          '我在2018年开始了我的大学旅程，在斯威本科技大学（SUT）攻读软件工程荣誉学士学位，计划于 2022 年底毕业。',
-          '在大三时，我渐渐爱上了前端开发，并在前端领域进行了更深入的学习，与同年在 Agriview 进行了3个月的前端工程师实习；在大四时，接受了 Movember 为期12个月的全栈工程师 Placement Offer 并工作至今。'
+          '我在 2018 年开始了我的大学旅程, 在斯威本科技大学(Swinburne University of Technology)攻读软件工程荣誉学士学位,计划于 2022 年底毕业.',
+          '在 2020 年的一门选修课中, 我渐渐爱上了前端开发, 在前端领域进行了更深入的学习, 并在 2020 年底于 Agriview 进行了3个月的前端开发实习; 在 2021 年时, 接受了 Movember 为期12个月的全栈开发 Placement Offer 并工作至今. '
         ]
       },
       work: {
@@ -214,18 +214,18 @@ const contents = {
           {
             date: '2021.08 - 至今',
             location: '墨尔本',
-            role: '全栈工程师 @Movember',
+            role: '全栈开发 @Movember',
             type: 'Placement',
             description:
-              '在敏捷小组中开发网页项目，主要技术栈为 React + TypeScript + Node + AWS Serverless。编写优雅（Airbnb 风格）以及可靠（Jest 覆盖率 95%）代码，并审核他人 PRs'
+              '在敏捷小组中开发网页项目, 主要技术栈为 React + TypeScript + Node + AWS Serverless. 编写优雅(Airbnb 风格)以及可靠(Jest 覆盖率 95%)代码, 并审核他人 PRs'
           },
           {
             date: '2020.12 - 2021.03',
             location: '墨尔本',
-            role: '前端工程师 @Agriview',
+            role: '前端开发 @Agriview',
             type: '实习',
             description:
-              '使用 Vue3 重构了旧项目，添加更为完善的响应式支持，并编写了用户反馈模块。减少冗余代码，添加清晰注释，增加代码的扩展性和维护性'
+              '使用 Vue3 重构了旧项目, 添加更为完善的响应式支持, 并编写了用户反馈模块. 减少冗余代码, 添加清晰注释, 增加代码的扩展性和维护性'
           }
         ]
       },
@@ -273,7 +273,7 @@ const contents = {
           img: mc,
           title: '我的世界网页版',
           description:
-            '来试一下网页版的 MC 吧，支持许多 MC 的特性，包括但不限于无限随机地形，丝滑的碰撞检测，保存读取机制...',
+            '来试一下网页版的 MC 吧, 支持许多 MC 的特性, 包括但不限于无限随机地形, 丝滑的碰撞检测, 保存读取机制...',
           preview: 'https://mc-zh.yuleiz.com',
           source: 'https://github.com/Vyse12138/minecraft-threejs'
         },
@@ -291,7 +291,7 @@ const contents = {
           img: okcode,
           title: 'OKCode',
           description:
-            '我的毕业设计 OKCode 是一个代码复杂度分析软件。分析输入代码并给予相应的改进建议，目标是为 SUT（我的大学）大一的学生提高代码质量。',
+            '我的毕业设计 OKCode 是一个代码复杂度分析软件. 分析输入代码并给予相应的改进建议, 目标是为我母校的大一的学生提高代码质量. ',
           preview: '',
           source: ''
         },
@@ -299,7 +299,7 @@ const contents = {
           id: 'cocktail',
           img: cocktail,
           title: '调酒菜单',
-          description: '找到你最喜欢的鸡尾酒，然后看看它是怎么调出来的吧。',
+          description: '找到你最喜欢的鸡尾酒, 然后看看它是怎么调出来的吧. ',
           preview: 'https://drink.yuleiz.com',
           source: 'https://github.com/Vyse12138/cocktail-recipes'
         },
@@ -308,7 +308,7 @@ const contents = {
           img: home,
           title: '个人主页',
           description:
-            '这里是我的个人主页，有我的简介和联系方式，我也会经常在这儿更新自己的文章以及项目。',
+            '这里是我的个人主页, 有我的简介和联系方式, 我也会经常在这儿更新自己的文章以及项目. ',
           preview: 'https://yuleiz.com',
           source: 'https://github.com/Vyse12138/yulei-homepage'
         },
@@ -317,7 +317,7 @@ const contents = {
           img: aye,
           title: 'All Your Electronics',
           description:
-            '一个全栈电商网站，包含了用户界面，后台管理界面，登录系统，以及聊天功能。',
+            '一个全栈电商网站, 包含了用户界面, 后台管理界面, 登录系统, 以及聊天功能. ',
           preview: '',
           source: 'https://github.com/Vyse12138/all-your-electronics'
         },
@@ -326,7 +326,7 @@ const contents = {
           img: rp,
           title: 'React 小项目合集',
           description:
-            '一些 React 小项目合集，包含了记事本，井字棋，markdown 编辑器等。',
+            '一些 React 小项目合集, 包含了记事本, 井字棋, markdown 编辑器等. ',
           preview: 'https://react-projects.yuleiz.com/',
           source: 'https://github.com/Vyse12138/react-projects'
         }
@@ -341,7 +341,7 @@ const contents = {
           img: algo,
           title: '算法笔记',
           description:
-            '算法第四版阅读笔记。用 TypeScript 编写各种算法比如：排序，查找，有向图，无向图等。',
+            '算法第四版阅读笔记. 用 TypeScript 编写各种算法比如：排序, 查找, 有向图, 无向图等. ',
           preview: 'https://github.com/Vyse12138/algorithms-4th-edition'
         },
         {
@@ -349,7 +349,7 @@ const contents = {
           img: basis,
           title: 'JavaScript 基础',
           description:
-            'JavaScript 权威指南第七版阅读笔记。涵盖几乎所有 JavaScript 基础知识。',
+            'JavaScript 权威指南第七版阅读笔记. 涵盖几乎所有 JavaScript 基础知识. ',
           preview: 'https://js.yuleiz.com/'
         },
 
@@ -358,7 +358,7 @@ const contents = {
           img: css,
           title: 'CSS 选择器',
           description:
-            '什么是 CSS 选择器？权重该如何计算？什么又是伪类和伪元素？让我们一起来看看吧。',
+            '什么是 CSS 选择器？权重该如何计算？什么又是伪类和伪元素？让我们一起来看看吧. ',
           preview: 'https://juejin.cn/post/6956856972004032520'
         },
         {
@@ -366,7 +366,7 @@ const contents = {
           img: mo,
           title: 'Map 还是 Object',
           description:
-            '在日常的 JavaScript 项目中，我们究竟应该使用 Object 还是 Map？他们有什么区别？什么情况下该选什么？',
+            '在日常的 JavaScript 项目中, 我们究竟应该使用 Object 还是 Map？他们有什么区别？什么情况下该选什么？',
           preview: 'https://juejin.cn/post/6941232930945499173'
         }
       ]

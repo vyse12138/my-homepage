@@ -65,6 +65,9 @@ export default function PostTab({
                     alignItems: 'center',
                     width: 'max-content'
                   }}
+                  onClick={e => {
+                    e.stopPropagation()
+                  }}
                 >
                   <MenuBook sx={{ paddingRight: '5px' }} /> Read it here
                 </Link>
