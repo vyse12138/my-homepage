@@ -29,7 +29,7 @@ const contents = {
       bio: {
         title: 'Bio',
         sections: [
-          "I'm an honor bachelor of software engineering student from Swinburne Uni and I'm going to graduate at the end of 2022.",
+          "I'm an honors bachelor of software engineering student from Swinburne University and I'm going to graduate at the end of 2022.",
           "During one elective course (Creating Web Application) in 2020, I found out that front-end development is what I'm passionate about. So I did some further study in the front-end area, and got an internship opportunity as a front-end developer at Agriview at the end of 2020. And in the next year, I accepted a 12-month placement offer as a full-stack developer at Movember."
         ]
       },
@@ -204,7 +204,7 @@ const contents = {
       bio: {
         title: '简介',
         sections: [
-          '我在 2018 年开始了我的大学旅程, 在斯威本科技大学(Swinburne University of Technology)攻读软件工程荣誉学士学位,计划于 2022 年底毕业.',
+          '我在 2018 年开始了我的大学旅程, 在斯威本科技大学 (Swinburne University of Technology) 攻读软件工程荣誉学士学位,计划于 2022 年底毕业.',
           '在 2020 年的一门选修课中, 我渐渐爱上了前端开发, 在前端领域进行了更深入的学习, 并在 2020 年底于 Agriview 进行了3个月的前端开发实习; 在 2021 年时, 接受了 Movember 为期12个月的全栈开发 Placement Offer 并工作至今. '
         ]
       },
