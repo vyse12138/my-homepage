@@ -22,116 +22,118 @@ export default function PostTab({
   }
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
-      {info ? (
-        <motion.div
-          key={1}
-          initial={{ rotateY: 90 }}
-          animate={{ rotateY: 0 }}
-          exit={{ rotateY: -90 }}
-          transition={{ duration: 0.2, type: 'easeInOut' }}
-        >
-          <Box
-            onClick={handleClick}
-            sx={{
-              width: '288px',
-              height: '232px',
-              marginBottom: '2rem',
-              backgroundColor: 'background.paper',
-              boxShadow:
-                theme.palette.mode === 'dark'
-                  ? '3px 3px 10px 3px rgb(180 180 180 / 20%)'
-                  : ' 3px 3px 10px 3px rgb(0 0 0 / 20%)',
-              padding: '1rem',
-              boxSizing: 'border-box',
-              borderRadius: '10px'
-            }}
+    <div style={{ zIndex: 100 }}>
+      <AnimatePresence exitBeforeEnter initial={false}>
+        {info ? (
+          <motion.div
+            key={1}
+            initial={{ rotateY: 90 }}
+            animate={{ rotateY: 0 }}
+            exit={{ rotateY: -90 }}
+            transition={{ duration: 0.2, type: 'easeInOut' }}
           >
             <Box
+              onClick={handleClick}
               sx={{
-                height: '163px'
+                width: '288px',
+                height: '232px',
+                marginBottom: '2rem',
+                backgroundColor: 'background.paper',
+                boxShadow:
+                  theme.palette.mode === 'dark'
+                    ? '3px 3px 10px 3px rgb(180 180 180 / 20%)'
+                    : ' 3px 3px 10px 3px rgb(0 0 0 / 20%)',
+                padding: '1rem',
+                boxSizing: 'border-box',
+                borderRadius: '10px'
               }}
             >
-              {' '}
-              <Typography sx={{ marginBottom: '0.2rem' }}>
-                {description}
-              </Typography>
-              {preview && (
-                <Link
-                  href={preview}
-                  target='_blank'
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    width: 'max-content'
-                  }}
-                  onClick={e => {
-                    e.stopPropagation()
-                  }}
-                >
-                  <MenuBook sx={{ paddingRight: '5px' }} /> Read it here
-                </Link>
-              )}
-            </Box>
+              <Box
+                sx={{
+                  height: '163px'
+                }}
+              >
+                {' '}
+                <Typography sx={{ marginBottom: '0.2rem' }}>
+                  {description}
+                </Typography>
+                {preview && (
+                  <Link
+                    href={preview}
+                    target='_blank'
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      width: 'max-content'
+                    }}
+                    onClick={e => {
+                      e.stopPropagation()
+                    }}
+                  >
+                    <MenuBook sx={{ paddingRight: '5px' }} /> Read it here
+                  </Link>
+                )}
+              </Box>
 
-            <Typography
-              variant='h6'
-              component='h3'
-              sx={{
-                textAlign: 'center',
-                backgroundColor: 'inherit'
-              }}
-            >
-              {title}
-            </Typography>
-          </Box>
-        </motion.div>
-      ) : (
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          key={2}
-          initial={{ rotateY: -90 }}
-          animate={{ rotateY: 0 }}
-          exit={{ rotateY: 90 }}
-          transition={{ duration: 0.2, type: 'easeInOut' }}
-        >
-          <Box
-            onClick={handleClick}
-            sx={{
-              width: '288px',
-              marginBottom: '2rem',
-              border: 'none',
-              cursor: 'pointer',
-              borderRadius: '10px',
-              backgroundColor: 'background.paper',
-              boxShadow:
-                theme.palette.mode === 'dark'
-                  ? '3px 3px 10px 3px rgb(180 180 180 / 20%)'
-                  : ' 3px 3px 10px 3px rgb(0 0 0 / 20%)'
-            }}
+              <Typography
+                variant='h6'
+                component='h3'
+                sx={{
+                  textAlign: 'center',
+                  backgroundColor: 'inherit'
+                }}
+              >
+                {title}
+              </Typography>
+            </Box>
+          </motion.div>
+        ) : (
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            key={2}
+            initial={{ rotateY: -90 }}
+            animate={{ rotateY: 0 }}
+            exit={{ rotateY: 90 }}
+            transition={{ duration: 0.2, type: 'easeInOut' }}
           >
-            <Image
-              draggable={false}
-              src={img}
-              height='163px'
-              width='288px'
-              alt={title}
-              className='br-10'
-              placeholder='blur'
-            />
-            <Typography
-              variant='h6'
-              component='h3'
+            <Box
+              onClick={handleClick}
               sx={{
-                textAlign: 'center',
-                padding: '1rem 0'
+                width: '288px',
+                marginBottom: '2rem',
+                border: 'none',
+                cursor: 'pointer',
+                borderRadius: '10px',
+                backgroundColor: 'background.paper',
+                boxShadow:
+                  theme.palette.mode === 'dark'
+                    ? '3px 3px 10px 3px rgb(180 180 180 / 20%)'
+                    : ' 3px 3px 10px 3px rgb(0 0 0 / 20%)'
               }}
             >
-              {title}
-            </Typography>
-          </Box>
-        </motion.div>
-      )}
-    </AnimatePresence>
+              <Image
+                draggable={false}
+                src={img}
+                height='163px'
+                width='288px'
+                alt={title}
+                className='br-10'
+                placeholder='blur'
+              />
+              <Typography
+                variant='h6'
+                component='h3'
+                sx={{
+                  textAlign: 'center',
+                  padding: '1rem 0'
+                }}
+              >
+                {title}
+              </Typography>
+            </Box>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   )
 }

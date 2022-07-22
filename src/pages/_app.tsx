@@ -63,9 +63,12 @@ export default function App({ Component, pageProps, router }: AppProps) {
     dark
   }
 
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     // @ts-ignore
-    import('../bg')
+    import('../bg').then(() => {
+      setLoading(false)
+    })
     // update language and theme on load
     setEnglish(!/^zh\b/.test(navigator.language))
   }, [])
@@ -108,7 +111,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
               alignItems: 'center',
               color: 'text.primary',
               transition: 'all 0.3s linear',
-              minHeight: '100vh'
+              minHeight: '100vh',
+              backgroundColor: loading ? 'black' : 'unset'
             }}
           >
             <Navigation />
