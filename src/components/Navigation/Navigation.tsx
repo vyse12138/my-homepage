@@ -46,7 +46,8 @@ export default function Navigation() {
           backgroundColor: alpha(theme.palette.background.default, 0.6),
           backdropFilter: 'blur(6px)',
           zIndex: '1',
-          marginBottom: '32px'
+          marginBottom: '32px',
+          mixBlendMode: globalContext.dark ? 'difference' : 'unset'
         }}
       >
         <AnimateWrapper>
@@ -156,6 +157,7 @@ export default function Navigation() {
               <Translate />
             </IconButton>
             <IconButton
+              id='theme'
               onClick={globalContext.toggleTheme}
               sx={{
                 color: 'inherit'

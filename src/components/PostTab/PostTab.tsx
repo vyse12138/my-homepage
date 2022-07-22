@@ -103,6 +103,7 @@ export default function PostTab({
               border: 'none',
               cursor: 'pointer',
               borderRadius: '10px',
+              backgroundColor: 'background.paper',
               boxShadow:
                 theme.palette.mode === 'dark'
                   ? '3px 3px 10px 3px rgb(180 180 180 / 20%)'
@@ -123,7 +124,6 @@ export default function PostTab({
               component='h3'
               sx={{
                 textAlign: 'center',
-                backgroundColor: 'inherit',
                 padding: '1rem 0'
               }}
             >

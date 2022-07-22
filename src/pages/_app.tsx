@@ -15,7 +15,8 @@ export const GlobalContext = createContext({
   toggleTheme: () => {},
   toggleLanguage: () => {},
   contents,
-  english: true
+  english: true,
+  dark: true
 })
 
 export default function App({ Component, pageProps, router }: AppProps) {
@@ -25,7 +26,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
     palette: {
       mode: dark ? 'dark' : 'light',
       background: {
-        default: dark ? grey[900] : orange[50],
+        default: dark ? '#000000' : orange[50],
         paper: dark ? '#191919' : orange[100]
       }
     },
@@ -58,13 +59,15 @@ export default function App({ Component, pageProps, router }: AppProps) {
       setEnglish(english => !english)
     },
     contents,
-    english
+    english,
+    dark
   }
 
   useEffect(() => {
+    // @ts-ignore
+    import('../bg')
     // update language and theme on load
     setEnglish(!/^zh\b/.test(navigator.language))
-    setDark(window.matchMedia('(prefers-color-scheme: dark)').matches)
   }, [])
 
   return (
@@ -90,12 +93,19 @@ export default function App({ Component, pageProps, router }: AppProps) {
       </Head>
       <GlobalContext.Provider value={globalContext}>
         <ThemeProvider theme={theme}>
+          <canvas
+            style={{
+              width: '100%',
+              height: '100%',
+              zIndex: -1,
+              position: 'fixed'
+            }}
+          ></canvas>
           <Box
             sx={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              backgroundColor: 'background.default',
               color: 'text.primary',
               transition: 'all 0.3s linear',
               minHeight: '100vh'

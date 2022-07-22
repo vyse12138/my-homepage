@@ -45,13 +45,17 @@ export default function Intro() {
         [theme.breakpoints.down('sm')]: {
           width: '80%',
           margin: 'auto'
-        }
+        },
+        mixBlendMode: globalContext.dark ? 'difference' : 'unset'
       }}
     >
       {/* Name */}
       <Typography
         variant='h4'
-        sx={{ marginBottom: '1rem', fontSize: '1.8rem' }}
+        sx={{
+          marginBottom: '1rem',
+          fontSize: '1.8rem'
+        }}
         component='h2'
       >
         {contents.title}{' '}
