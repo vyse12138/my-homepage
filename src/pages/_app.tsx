@@ -97,13 +97,16 @@ export default function App({ Component, pageProps, router }: AppProps) {
               alignItems: 'center',
               backgroundColor: 'background.default',
               color: 'text.primary',
-              transition: 'all 0.3s linear'
+              transition: 'all 0.3s linear',
+              minHeight: '100vh'
             }}
           >
             <Navigation />
-            <AnimatePresence exitBeforeEnter initial={false}>
-              <Component {...pageProps} key={router.route} />
-            </AnimatePresence>
+            <Box sx={{ flexGrow: 1 }}>
+              <AnimatePresence exitBeforeEnter initial={false}>
+                <Component {...pageProps} key={router.route} />
+              </AnimatePresence>
+            </Box>
             <Footer />
           </Box>
         </ThemeProvider>
