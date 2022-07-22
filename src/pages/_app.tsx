@@ -101,7 +101,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
             }}
           >
             <Navigation />
-            <Scene />
             <AnimatePresence exitBeforeEnter initial={false}>
               <Component {...pageProps} key={router.route} />
             </AnimatePresence>

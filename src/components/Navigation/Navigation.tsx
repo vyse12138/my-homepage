@@ -45,7 +45,8 @@ export default function Navigation() {
           left: '0',
           backgroundColor: alpha(theme.palette.background.default, 0.6),
           backdropFilter: 'blur(6px)',
-          zIndex: '1'
+          zIndex: '1',
+          marginBottom: '32px'
         }}
       >
         <AnimateWrapper>
