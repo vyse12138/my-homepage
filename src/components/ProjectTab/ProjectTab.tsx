@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { Box, Typography, Link, useTheme } from '@mui/material'
 import { GitHub, WebAsset } from '@mui/icons-material'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
+import { GlobalContext } from '../../pages/_app'
 
 export default function ProjectTab({
   img,
@@ -17,6 +18,7 @@ export default function ProjectTab({
   preview: string
   source: string
 }) {
+  const { english } = useContext(GlobalContext)
   const theme = useTheme()
   const [info, setInfo] = useState(false)
   const handleClick = () => {
@@ -71,7 +73,8 @@ export default function ProjectTab({
                     e.stopPropagation()
                   }}
                 >
-                  <WebAsset sx={{ paddingRight: '5px' }} /> Preview
+                  <WebAsset sx={{ paddingRight: '5px' }} />
+                  {english ? 'Preview' : '预览'}
                 </Link>
               )}
               {source && (
@@ -88,7 +91,7 @@ export default function ProjectTab({
                   }}
                 >
                   <GitHub sx={{ paddingRight: '5px' }} />{' '}
-                  <Typography>Source</Typography>
+                  <Typography>{english ? ' Source' : '代码'}</Typography>
                 </Link>
               )}
             </Box>
