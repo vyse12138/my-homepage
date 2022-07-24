@@ -90,7 +90,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         />
         <meta
           property='og:image'
-          content='https://yuleiz.com/images/index.png'
+          content='https://yuleiz.com/images/index.jpg'
         />
         <meta property='og:url' content='https://yuleiz.com/' />
       </Head>
