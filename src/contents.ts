@@ -1,4 +1,5 @@
 import {
+  FaceRetouchingNatural,
   MusicNote,
   Edit,
   SportsEsports,
@@ -59,6 +60,7 @@ const contents = {
       interest: {
         title: 'I',
         sections: [
+          { label: 'Yirui Chen', icon: FaceRetouchingNatural },
           { label: 'EDM', icon: MusicNote },
           { label: "Rubik's Cube", icon: BorderAll },
           { label: 'Pen Spinning', icon: Edit },
@@ -279,6 +281,7 @@ const contents = {
       interest: {
         title: '我',
         sections: [
+          { label: '陈伊瑞', icon: FaceRetouchingNatural },
           { label: '电子音乐', icon: MusicNote },
           { label: '魔方', icon: BorderAll },
           { label: '转笔', icon: Edit },
