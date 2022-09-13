@@ -11,7 +11,7 @@ import {
 } from '@mui/material'
 import Contact from './src/Contact'
 import Interest from './src/Interest'
-import { Favorite, LocationOn, Work } from '@mui/icons-material'
+import { Favorite, LocationOn, Work, Apartment } from '@mui/icons-material'
 import Tech from './src/Tech'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -68,64 +68,119 @@ export default function Intro() {
         />
       </Typography>
       <Typography sx={{ marginBottom: '3rem' }}>{contents.role}</Typography>
+
       {/* Bio */}
       <Typography variant='h5' component='h3' sx={{ marginBottom: '1rem' }}>
         {contents.bio.title}
       </Typography>
       {contents.bio.sections.map(section => (
-        <Typography key={section} sx={{ marginBottom: '1rem' }}>
+        <Typography
+          key={section}
+          sx={{ marginBottom: '1rem', whiteSpace: 'pre-wrap' }}
+        >
           {section}
         </Typography>
       ))}
 
-      {/* Work */}
-      {/* {window.innerWidth > 600 && (
-        <>
-          <Typography variant='h5' component='h3' sx={{ marginTop: '3rem' }}>
-            {contents.work.title}
+      {/* Experience */}
+      <Typography
+        variant='h5'
+        component='h3'
+        sx={{ marginBottom: '1rem', marginTop: '3rem' }}
+      >
+        {contents.work.title}
+      </Typography>
+      {contents.work.sections.map(section => (
+        <div key={section.place}>
+          {' '}
+          <Typography
+            variant='subtitle1'
+            sx={{
+              marginBottom: '4px'
+            }}
+          >
+            {section.date}
           </Typography>
-          <Table>
-            <TableBody>
-              {contents.work.sections.map(section => (
-                <TableRow key={section.date} sx={{ verticalAlign: 'top' }}>
-                  <TableCell
-                    sx={{ minWidth: '150px', paddingLeft: '0', border: 'none' }}
+          <Typography
+            sx={{
+              marginLeft: '32px',
+              marginBottom: '4px',
+              display: 'flex',
+              alignItems: 'center'
+            }}
+          >
+            <Work sx={{ height: '18px', marginRight: '8px' }} />
+            {section.role}
+          </Typography>
+          <Typography
+            sx={{
+              marginLeft: '32px',
+              marginBottom: '4px',
+              display: 'flex',
+              alignItems: 'center'
+            }}
+          >
+            <Apartment sx={{ height: '18px', marginRight: '8px' }} />
+            {section.place}
+          </Typography>
+          <Typography
+            sx={{
+              marginLeft: '32px',
+              marginBottom: '32px',
+              display: 'flex',
+              alignItems: 'center'
+            }}
+          >
+            <LocationOn sx={{ height: '18px', marginRight: '8px' }} />
+            {section.location}
+          </Typography>
+        </div>
+      ))}
+      {/* Work */}
+      {/* <>
+        <Typography variant='h5' component='h3' sx={{ marginTop: '3rem' }}>
+          {contents.work.title}
+        </Typography>
+        <Table>
+          <TableBody>
+            {contents.work.sections.map(section => (
+              <TableRow key={section.date} sx={{ verticalAlign: 'top' }}>
+                <TableCell
+                  sx={{ minWidth: '150px', paddingLeft: '0', border: 'none' }}
+                >
+                  <Typography variant='subtitle1' sx={{ fontWeight: 'bold' }}>
+                    {section.date}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center'
+                    }}
                   >
-                    <Typography variant='subtitle1' sx={{ fontWeight: 'bold' }}>
-                      {section.date}
-                    </Typography>
-                    <Typography
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'center'
-                      }}
-                    >
-                      <LocationOn sx={{ height: '18px' }} />
-                      {section.location}
-                    </Typography>
-                    <Typography
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'center'
-                      }}
-                    >
-                      <Work sx={{ height: '18px' }} />
+                    <LocationOn sx={{ height: '18px' }} />
+                    {section.location}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center'
+                    }}
+                  >
+                    <Work sx={{ height: '18px' }} />
 
-                      {section.type}
-                    </Typography>
-                  </TableCell>
-                  <TableCell sx={{ border: 'none' }}>
-                    <Typography variant='subtitle1' sx={{ fontWeight: 'bold' }}>
-                      {section.role}
-                    </Typography>
-                    <Typography>{section.description}</Typography>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </>
-      )} */}
+                    {section.type}
+                  </Typography>
+                </TableCell>
+                <TableCell sx={{ border: 'none' }}>
+                  <Typography variant='subtitle1' sx={{ fontWeight: 'bold' }}>
+                    {section.role}
+                  </Typography>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </> */}
 
       {/* Tech-Stack */}
       <Typography
@@ -135,16 +190,69 @@ export default function Intro() {
       >
         {contents.tech.title}
       </Typography>
+      {/* FE UIs */}
+      <Typography variant='h6' component='h4' sx={{ marginBottom: '1rem' }}>
+        {contents.tech.subTitle[0]}
+      </Typography>
       <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-        {contents.tech.sections.map(section => (
-          <motion.div whileHover={{ scale: 1.1 }} key={section.name}>
-            <Tech
-              key={section.name}
-              name={section.name}
-              point={section.point}
-            />
-          </motion.div>
-        ))}
+        {contents.tech.sections.map(section => {
+          if (section.type !== 1) return
+          return (
+            <motion.div whileHover={{ scale: 1.1 }} key={section.name}>
+              <Tech
+                key={section.name}
+                name={section.name}
+                point={section.point}
+              />
+            </motion.div>
+          )
+        })}
+      </Box>
+
+      {/* FE Techs */}
+      <Typography
+        variant='h6'
+        component='h4'
+        sx={{ marginBottom: '1rem', marginTop: '1rem' }}
+      >
+        {contents.tech.subTitle[1]}
+      </Typography>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+        {contents.tech.sections.map(section => {
+          if (section.type !== 2) return
+          return (
+            <motion.div whileHover={{ scale: 1.1 }} key={section.name}>
+              <Tech
+                key={section.name}
+                name={section.name}
+                point={section.point}
+              />
+            </motion.div>
+          )
+        })}
+      </Box>
+
+      {/* Other Techs */}
+      <Typography
+        variant='h6'
+        component='h4'
+        sx={{ marginBottom: '1rem', marginTop: '1rem' }}
+      >
+        {contents.tech.subTitle[2]}
+      </Typography>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+        {contents.tech.sections.map(section => {
+          if (section.type !== 3) return
+          return (
+            <motion.div whileHover={{ scale: 1.1 }} key={section.name}>
+              <Tech
+                key={section.name}
+                name={section.name}
+                point={section.point}
+              />
+            </motion.div>
+          )
+        })}
       </Box>
 
       {/* Interest */}
@@ -168,7 +276,6 @@ export default function Intro() {
           icon={<section.icon />}
         />
       ))}
-
       {/* Contact */}
       <Typography
         variant='h5'

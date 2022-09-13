@@ -29,29 +29,30 @@ const contents = {
       bio: {
         title: 'Bio',
         sections: [
-          "I'm an honors bachelor of software engineering student from Swinburne University and I'm going to graduate in the end of 2022.",
-          "During one elective course (Creating Web Application) in 2020, I found out that front end development is what I'm passionate about. So I did some further study in the front end area, and got an internship opportunity as a front end developer at Agriview in the end of 2020. And in 2021, I accepted a 12-month placement offer as a full stack developer at Movember."
+          "I'm an honours bachelor of software engineering student from Swinburne University and I'm going to graduate at the end of 2022.",
+          'My passion for software lies with dreaming up ideas and making them come true with elegant interface and great code quality.'
         ]
       },
       work: {
-        title: 'Work',
+        title: 'Experience',
         sections: [
           {
-            date: '2021.08 - Present',
-            location: 'Melbourne',
-            role: 'Full-Stack Developer @Movember',
-            type: 'Placement',
-            description:
-              "Worked in an agile team to develop web product. Used react + TypeScript + Node + AWS Serverless as the main tech stack, wrote robust (95% + Jest coverage) and elegant (Airbnb based ESlint) code as well as reviewed teams' PRs."
+            date: '2022.08 - Present',
+            location: 'Shanghai, CN (remote)',
+            role: 'Front End Software Engineer',
+            place: 'Naive Systems'
+          },
+          {
+            date: '2021.08 - 2022.07',
+            location: 'Melbourne, AU',
+            role: 'Full Stack Developer',
+            place: 'Movember'
           },
           {
             date: '2020.12 - 2021.03',
-            location: 'Melbourne',
-            role: 'Front End Developer @Agriview',
-            type: 'Internship',
-
-            description:
-              'Refactored an old project with Vue3 and featured more responsive supports. Reduced some redundant code, and added clear comments to make it more extensible.'
+            location: 'Melbourne, AU',
+            role: 'Front End Developer',
+            place: 'Agriview'
           }
         ]
       },
@@ -69,17 +70,31 @@ const contents = {
       },
       tech: {
         title: 'Tech Stack',
+        subTitle: ['FE UIs', 'FE Techs', 'Other Techs'],
         sections: [
-          { name: 'JavaScript', point: 9 },
-          { name: 'React', point: 8 },
-          { name: 'Vue', point: 8 },
-          { name: 'TypeScript', point: 8 },
-          { name: 'UI Libraries', point: 8 },
-          { name: 'CSS', point: 7 },
-          { name: 'Node.js', point: 6 },
-          { name: 'Three.js', point: 6 },
-          { name: 'Jest', point: 5 },
-          { name: 'AWS Serverless', point: 5 }
+          { name: 'HTML', point: 9, type: 1 },
+          { name: 'CSS', point: 9, type: 1 },
+          { name: 'SASS', point: 8, type: 1 },
+          { name: 'Styled Components', point: 8, type: 1 },
+          { name: 'Tailwind CSS', point: 8, type: 1 },
+          { name: 'Material UI', point: 7, type: 1 },
+
+          { name: 'JavaScript', point: 9, type: 2 },
+          { name: 'TypeScript', point: 9, type: 2 },
+          { name: 'React.js', point: 9, type: 2 },
+          { name: 'Vue.js', point: 8, type: 2 },
+          { name: 'Next.js', point: 8, type: 2 },
+          { name: 'Three.js', point: 7, type: 2 },
+          { name: 'Vite', point: 6, type: 2 },
+          { name: 'WebPack', point: 6, type: 2 },
+          { name: 'WebGL', point: 5, type: 2 },
+
+          { name: 'Git', point: 9, type: 3 },
+          { name: 'Node.js', point: 8, type: 3 },
+          { name: 'Bash', point: 7, type: 3 },
+          { name: 'AWS', point: 7, type: 3 },
+          { name: 'Jest', point: 6, type: 3 },
+          { name: 'GraphQL', point: 5, type: 3 }
         ]
       },
       contact: {
@@ -210,39 +225,55 @@ const contents = {
         ]
       },
       work: {
-        title: '工作',
+        title: '工作经历',
         sections: [
           {
-            date: '2021.08 - 至今',
-            location: '墨尔本',
-            role: '全栈开发 @Movember',
-            type: 'Placement',
-            description:
-              '在敏捷小组中开发网页项目, 主要技术栈为 React + TypeScript + Node + AWS Serverless. 编写优雅(Airbnb 风格)以及可靠(Jest 覆盖率 95%)代码, 并审核他人 PRs'
+            date: '2022.08 - 至今',
+            location: '上海, 中国 (远程)',
+            role: '前端开发实习',
+            place: 'Naive Systems'
+          },
+          {
+            date: '2021.08 - 2022.07',
+            location: '墨尔本, 澳大利亚',
+            role: '全栈开发实习',
+            place: 'Movember'
           },
           {
             date: '2020.12 - 2021.03',
-            location: '墨尔本',
-            role: '前端开发 @Agriview',
-            type: '实习',
-            description:
-              '使用 Vue3 重构了旧项目, 添加更为完善的响应式支持, 并编写了用户反馈模块. 减少冗余代码, 添加清晰注释, 增加代码的扩展性和维护性'
+            location: '墨尔本, 澳大利亚',
+            role: '前端开发实习',
+            place: 'Agriview'
           }
         ]
       },
       tech: {
         title: '技术栈',
+        subTitle: ['UI', '前端', '其他'],
         sections: [
-          { name: 'JavaScript', point: 9 },
-          { name: 'React', point: 8 },
-          { name: 'Vue', point: 8 },
-          { name: 'TypeScript', point: 7 },
-          { name: '各类 UI 框架', point: 8 },
-          { name: 'CSS', point: 7 },
-          { name: 'Node.js', point: 6 },
-          { name: 'Three.js', point: 6 },
-          { name: 'Jest', point: 5 },
-          { name: 'AWS Serverless', point: 5 }
+          { name: 'HTML', point: 9, type: 1 },
+          { name: 'CSS', point: 9, type: 1 },
+          { name: 'SASS', point: 8, type: 1 },
+          { name: 'Styled Components', point: 8, type: 1 },
+          { name: 'Tailwind CSS', point: 8, type: 1 },
+          { name: 'Material UI', point: 7, type: 1 },
+
+          { name: 'JavaScript', point: 9, type: 2 },
+          { name: 'TypeScript', point: 9, type: 2 },
+          { name: 'React.js', point: 9, type: 2 },
+          { name: 'Vue.js', point: 8, type: 2 },
+          { name: 'Next.js', point: 8, type: 2 },
+          { name: 'Three.js', point: 7, type: 2 },
+          { name: 'Vite', point: 6, type: 2 },
+          { name: 'WebPack', point: 6, type: 2 },
+          { name: 'WebGL', point: 5, type: 2 },
+
+          { name: 'Git', point: 9, type: 3 },
+          { name: 'Node.js', point: 8, type: 3 },
+          { name: 'Bash', point: 7, type: 3 },
+          { name: 'AWS', point: 7, type: 3 },
+          { name: 'Jest', point: 6, type: 3 },
+          { name: 'GraphQL', point: 5, type: 3 }
         ]
       },
       interest: {
