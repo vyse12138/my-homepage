@@ -26,7 +26,7 @@ const contents = {
   english: {
     intro: {
       title: "Hi there, I'm Yulei",
-      role: 'Student / Front End Developer / Full Stack Developer',
+      role: 'Student / Software Engineer / Front End Developer',
       bio: {
         title: 'Bio',
         sections: [
@@ -218,12 +218,12 @@ const contents = {
   chinese: {
     intro: {
       title: '嗨, 这里是小诸',
-      role: '学生 / 前端开发 / 全栈开发',
+      role: '学生 / 软件工程师 / 前端开发',
       bio: {
         title: '简介',
         sections: [
-          '我在 2018 年开始了我的大学旅程, 在斯威本科技大学 (Swinburne University of Technology) 攻读软件工程荣誉学士学位,计划于 2022 年底毕业.',
-          '在 2020 年的一门选修课中, 我渐渐爱上了前端开发, 然后在前端领域进行了更深入的学习, 并在 2020 年底于 Agriview 进行了 3 个月的前端开发实习; 在 2021 年 7 月时, 我以全栈开发实习生的角色加入了 Movember 并工作至今.'
+          '我在 2018 年开始了我的大学旅程, 在斯威本科技大学 (Swinburne University of Technology) 攻读软件工程专业的荣誉学士学位,计划于 2022 年底毕业.',
+          '我对软件开发的热情在于用代码去解决遇到的问题, 或者去实现自己的各种想法. 我会以梦为马, 不忘初心, 将对软件开发的热情化为动力, 立志于开发更优雅及高质量的项目'
         ]
       },
       work: {
