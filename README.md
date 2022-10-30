@@ -2,7 +2,7 @@
 
 My homepage.
 
-https://yuleiz.com/
+https://yulei.me
 
 ## Tech Stack
 
