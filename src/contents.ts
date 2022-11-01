@@ -117,7 +117,7 @@ const contents = {
           title: 'Minecraft Clone',
           description:
             'Try out the Minecraft clone in your browser! It supports a lot of features from Minecraft, read more in my GitHub repository.',
-          preview: 'https://mc.yuleiz.com',
+          preview: 'https://mc.yulei.me',
           source: 'https://github.com/Vyse12138/minecraft-threejs'
         },
         {
@@ -126,7 +126,7 @@ const contents = {
           title: 'Zen.js',
           description:
             'Zen is an open source 3D charting library for React, it supports a very smooth control system',
-          preview: 'https://zen.yuleiz.com',
+          preview: 'https://zen.yulei.me',
           source: 'https://github.com/vyse12138/zen'
         },
         {
@@ -144,7 +144,7 @@ const contents = {
           title: 'Cocktail Recipes',
           description:
             'Search for your favorite cocktail recipes and make a drink yourself.',
-          preview: 'https://drink.yuleiz.com',
+          preview: 'https://drink.yulei.me',
           source: 'https://github.com/Vyse12138/cocktail-recipes'
         },
         {
@@ -153,7 +153,7 @@ const contents = {
           title: 'My Homepage',
           description:
             "This is my homepage, you can find my bio and contact info here, I'll also update my projects and posts here regularly.",
-          preview: 'https://yuleiz.com',
+          preview: 'https://yulei.me',
           source: 'https://github.com/Vyse12138/yulei-homepage'
         },
         {
@@ -171,7 +171,7 @@ const contents = {
           title: 'React Projects Collection',
           description:
             'Collection of small projects implemented in React. Including shopping buddy, tic-tac-toe, markdown editor etc.',
-          preview: 'https://react-projects.yuleiz.com/',
+          preview: 'https://react-projects.yulei.me/',
           source: 'https://github.com/Vyse12138/react-projects'
         }
       ]
@@ -194,7 +194,7 @@ const contents = {
           title: 'JavaScript Basis',
           description:
             'Reading notes on JavaScript: The Definitive Guide, 7th Edition. Including pretty much everything we need to know about JavaScript.',
-          preview: 'https://js.yuleiz.com/'
+          preview: 'https://js.yulei.me/'
         },
         {
           id: 'css',
@@ -309,7 +309,7 @@ const contents = {
           title: '我的世界网页版',
           description:
             '来试一下网页版的 MC 吧, 支持许多 MC 的特性, 包括但不限于无限随机地形, 丝滑的碰撞检测, 保存读取机制...',
-          preview: 'https://mc-zh.yuleiz.com',
+          preview: 'https://mcz.yulei.me',
           source: 'https://github.com/Vyse12138/minecraft-threejs'
         },
         {
@@ -318,7 +318,7 @@ const contents = {
           title: 'Zen.js',
           description:
             'Zen 是一款 3D 图表库, 旨在通过为传统 2D 图表多增加一个维度的方式来更为高效的展示更多数据, 并且更便于进行数据间的比较',
-          preview: 'https://zen.yuleiz.com',
+          preview: 'https://zen.yulei.me',
           source: 'https://github.com/vyse12138/zen'
         },
         {
@@ -335,7 +335,7 @@ const contents = {
           img: cocktail,
           title: '调酒菜单',
           description: '找到你最喜欢的鸡尾酒, 然后看看它是怎么调出来的吧. ',
-          preview: 'https://drink.yuleiz.com',
+          preview: 'https://drink.yulei.me',
           source: 'https://github.com/Vyse12138/cocktail-recipes'
         },
         {
@@ -344,7 +344,7 @@ const contents = {
           title: '个人主页',
           description:
             '这里是我的个人主页, 有我的简介和联系方式, 我也会经常在这儿更新自己的文章以及项目. ',
-          preview: 'https://yuleiz.com',
+          preview: 'https://yulei.me',
           source: 'https://github.com/Vyse12138/yulei-homepage'
         },
         {
@@ -362,7 +362,7 @@ const contents = {
           title: 'React 小项目合集',
           description:
             '一些 React 小项目合集, 包含了记事本, 井字棋, markdown 编辑器等. ',
-          preview: 'https://react-projects.yuleiz.com/',
+          preview: 'https://react-projects.yulei.me/',
           source: 'https://github.com/Vyse12138/react-projects'
         }
       ]
@@ -385,7 +385,7 @@ const contents = {
           title: 'JavaScript 基础',
           description:
             'JavaScript 权威指南第七版阅读笔记. 涵盖几乎所有 JavaScript 基础知识. ',
-          preview: 'https://js.yuleiz.com/'
+          preview: 'https://js.yulei.me/'
         },
 
         {
