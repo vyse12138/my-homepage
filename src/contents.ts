@@ -26,33 +26,34 @@ const contents = {
   english: {
     intro: {
       title: "Hi there, I'm Yulei",
-      role: 'Student / Software Engineer / Front End Developer',
+      role: 'Student / Software Engineer / Frontend Developer',
       bio: {
         title: 'Bio',
         sections: [
-          "I'm an honours bachelor of software engineering student from Swinburne University and I'm going to graduate at the end of 2022.",
+          "I'm a software engineer intern at a startup in Shanghai.",
+          'I graduated from Swinburne University of Technology with an Honours Bachelor of Software Engineering in 2022.',
           'My passion for software lies with dreaming up ideas and making them come true with elegant interface and great code quality.'
         ]
       },
       work: {
-        title: 'Experience',
+        title: 'Professional Experience',
         sections: [
           {
-            date: '2022.08 - Present',
-            location: 'Shanghai, CN (remote)',
-            role: 'Front End Software Engineer',
+            date: '2022.08 - 2022.12',
+            location: 'Shanghai, China (remote)',
+            role: 'Software Engineer Intern',
             place: 'Naive Systems'
           },
           {
-            date: '2021.08 - 2022.07',
-            location: 'Melbourne, AU',
-            role: 'Full Stack Developer',
+            date: '2021.07 - 2022.07',
+            location: 'Melbourne, Australia',
+            role: 'Full Stack Developer Intern',
             place: 'Movember'
           },
           {
             date: '2020.12 - 2021.03',
-            location: 'Melbourne, AU',
-            role: 'Front End Developer',
+            location: 'Melbourne, Australia',
+            role: 'Frontend Developer Intern',
             place: 'Agriview'
           }
         ]
@@ -92,10 +93,11 @@ const contents = {
           { name: 'WebGL', point: 5, type: 2 },
 
           { name: 'Git', point: 9, type: 3 },
-          { name: 'Node.js', point: 8, type: 3 },
+          { name: 'Node.js', point: 9, type: 3 },
           { name: 'Bash', point: 7, type: 3 },
           { name: 'AWS', point: 7, type: 3 },
           { name: 'Jest', point: 6, type: 3 },
+          { name: 'Linux', point: 6, type: 3 },
           { name: 'GraphQL', point: 5, type: 3 }
         ]
       },
@@ -218,25 +220,26 @@ const contents = {
   chinese: {
     intro: {
       title: '嗨, 这里是小诸',
-      role: '学生 / 软件工程师 / 前端开发',
+      role: '学生 / 软件工程师 / 前端工程师',
       bio: {
         title: '简介',
         sections: [
-          '我在 2018 年开始了我的大学旅程, 在斯威本科技大学 (Swinburne University of Technology) 攻读软件工程专业的荣誉学士学位,计划于 2022 年底毕业.',
-          '我对软件开发的热情在于用代码去解决遇到的问题, 或者去实现自己的各种想法. 以梦为马, 不忘初心, 我将对软件开发的热情化为动力, 立志于开发更优雅及高质量的项目.'
+          '我现在就职于一家位于上海的创业公司, 担任软件开发实习生一职, 主要负责前端开发.',
+          '我在 2022 底年毕业于威本科技大学, 取得了软件工程专业的荣誉学士学位.',
+          '我对软件开发的热情在于用的代码去解决遇到的各种问题, 或者去实现自己的各种天马行空的想法. 并且希望在开发和维护代码的过程中, 我也能够学习到新的技术知识.'
         ]
       },
       work: {
         title: '工作经历',
         sections: [
           {
-            date: '2022.08 - 至今',
+            date: '2022.08 - 2022.12',
             location: '上海, 中国 (远程)',
-            role: '前端开发实习',
-            place: 'Naive Systems'
+            role: '软件开发实习',
+            place: '那一科技'
           },
           {
-            date: '2021.08 - 2022.07',
+            date: '2021.07 - 2022.07',
             location: '墨尔本, 澳大利亚',
             role: '全栈开发实习',
             place: 'Movember'
@@ -271,10 +274,11 @@ const contents = {
           { name: 'WebGL', point: 5, type: 2 },
 
           { name: 'Git', point: 9, type: 3 },
-          { name: 'Node.js', point: 8, type: 3 },
+          { name: 'Node.js', point: 9, type: 3 },
           { name: 'Bash', point: 7, type: 3 },
           { name: 'AWS', point: 7, type: 3 },
           { name: 'Jest', point: 6, type: 3 },
+          { name: 'Linux', point: 6, type: 3 },
           { name: 'GraphQL', point: 5, type: 3 }
         ]
       },
