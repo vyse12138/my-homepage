@@ -1,11 +1,10 @@
 import { createContext, useEffect, useState } from 'react'
-import { grey, orange } from '@mui/material/colors'
+import { orange } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { Box, ThemeProvider } from '@mui/material'
 import type { AppProps } from 'next/app'
 import contents from '../contents'
 import '../index.css'
-import Scene from '../components/Scene'
 import Navigation from '../components/Navigation'
 import { AnimatePresence } from 'framer-motion'
 import Head from 'next/head'
@@ -76,7 +75,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Head>
-        {' '}
         <link rel='icon' href='/images/favicon.ico' />
         <meta
           name='description'
@@ -90,9 +88,9 @@ export default function App({ Component, pageProps, router }: AppProps) {
         />
         <meta
           property='og:image'
-          content='https://yuleiz.com/images/index.jpg'
+          content='https://www.yulei.me/images/index.jpg'
         />
-        <meta property='og:url' content='https://yuleiz.com/' />
+        <meta property='og:url' content='https://yulei.me/' />
       </Head>
       <GlobalContext.Provider value={globalContext}>
         <ThemeProvider theme={theme}>

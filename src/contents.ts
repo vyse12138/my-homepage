@@ -30,7 +30,7 @@ const contents = {
       bio: {
         title: 'Bio',
         sections: [
-          "I'm a software engineer intern at a startup in Shanghai.",
+          "I'm a Software Engineer Intern at a startup in Shanghai.",
           'I graduated from Swinburne University of Technology with an Honours Bachelor of Software Engineering in 2022.',
           'My passion for software lies with dreaming up ideas and making them come true with elegant interface and great code quality.'
         ]
@@ -61,7 +61,7 @@ const contents = {
       interest: {
         title: 'I',
         sections: [
-          { label: 'Yirui Chen', icon: FaceRetouchingNatural },
+          // { label: 'Yirui Chen', icon: FaceRetouchingNatural },
           { label: 'EDM', icon: MusicNote },
           { label: "Rubik's Cube", icon: BorderAll },
           { label: 'Pen Spinning', icon: Edit },
@@ -285,7 +285,7 @@ const contents = {
       interest: {
         title: '我',
         sections: [
-          { label: '陈伊瑞', icon: FaceRetouchingNatural },
+          // { label: '陈伊瑞', icon: FaceRetouchingNatural },
           { label: '电子音乐', icon: MusicNote },
           { label: '魔方', icon: BorderAll },
           { label: '转笔', icon: Edit },
