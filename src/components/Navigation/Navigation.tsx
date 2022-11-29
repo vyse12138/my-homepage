@@ -44,8 +44,8 @@ export default function Navigation() {
           top: '0',
           left: '0',
           backgroundColor: alpha(theme.palette.background.default, 0.6),
-          backdropFilter: 'blur(6px)',
-          zIndex: '1',
+          backdropFilter: 'blur(16px)',
+          zIndex: '10000',
           marginBottom: '32px',
           mixBlendMode: globalContext.dark ? 'difference' : 'unset'
         }}
