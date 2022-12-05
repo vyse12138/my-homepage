@@ -40,28 +40,30 @@ const contents = {
         sections: [
           {
             date: '2022.08 - 2022.12',
-            location: 'Shanghai, China (remote)',
-            role: 'Software Engineer Intern',
-            place: 'Naive Systems'
+            location: 'Shanghai, China',
+            role: 'Software Engineer (Intern)',
+            place: 'Naive Systems',
+            link: 'https://naivesystems.com/'
           },
           {
             date: '2021.07 - 2022.07',
             location: 'Melbourne, Australia',
-            role: 'Full Stack Developer Intern',
-            place: 'Movember'
+            role: 'Full Stack Developer (Intern)',
+            place: 'Movember',
+            link: 'https://movember.com/'
           },
           {
             date: '2020.12 - 2021.03',
             location: 'Melbourne, Australia',
-            role: 'Frontend Developer Intern',
-            place: 'Agriview'
+            role: 'Frontend Developer (Intern)',
+            place: 'Agriview',
+            link: 'https://www.agriview.com.au/'
           }
         ]
       },
       interest: {
         title: 'I',
         sections: [
-          // { label: 'Yirui Chen', icon: FaceRetouchingNatural },
           { label: 'EDM', icon: MusicNote },
           { label: "Rubik's Cube", icon: BorderAll },
           { label: 'Pen Spinning', icon: Edit },
@@ -234,21 +236,24 @@ const contents = {
         sections: [
           {
             date: '2022.08 - 2022.12',
-            location: '上海, 中国 (远程)',
-            role: '软件开发实习',
-            place: '那一科技'
+            location: '中国 - 上海',
+            role: '软件工程师(实习)',
+            place: 'Naive Systems',
+            link: 'https://naivesystems.com/'
           },
           {
             date: '2021.07 - 2022.07',
-            location: '墨尔本, 澳大利亚',
-            role: '全栈开发实习',
-            place: 'Movember'
+            location: '澳大利亚 - 墨尔本',
+            role: '全栈工程师(实习)',
+            place: 'Movember',
+            link: 'https://movember.com/'
           },
           {
             date: '2020.12 - 2021.03',
-            location: '墨尔本, 澳大利亚',
-            role: '前端开发实习',
-            place: 'Agriview'
+            location: '澳大利亚 - 墨尔本',
+            role: '前端工程师(实习)',
+            place: 'Agriview',
+            link: 'https://www.agriview.com.au/'
           }
         ]
       },
@@ -285,7 +290,6 @@ const contents = {
       interest: {
         title: '我',
         sections: [
-          // { label: '陈伊瑞', icon: FaceRetouchingNatural },
           { label: '电子音乐', icon: MusicNote },
           { label: '魔方', icon: BorderAll },
           { label: '转笔', icon: Edit },

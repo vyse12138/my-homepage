@@ -7,7 +7,8 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  useTheme
+  useTheme,
+  Link
 } from '@mui/material'
 import Contact from './src/Contact'
 import Interest from './src/Interest'
@@ -92,7 +93,6 @@ export default function Intro() {
       </Typography>
       {contents.work.sections.map(section => (
         <div key={section.place}>
-          {' '}
           <Typography
             variant='subtitle1'
             sx={{
@@ -101,6 +101,7 @@ export default function Intro() {
           >
             {section.date}
           </Typography>
+
           <Typography
             sx={{
               marginLeft: '32px',
@@ -110,8 +111,9 @@ export default function Intro() {
             }}
           >
             <Work sx={{ height: '18px', marginRight: '8px' }} />
-            {section.role}
+            <b>{section.role}</b>
           </Typography>
+
           <Typography
             sx={{
               marginLeft: '32px',
@@ -121,8 +123,11 @@ export default function Intro() {
             }}
           >
             <Apartment sx={{ height: '18px', marginRight: '8px' }} />
-            {section.place}
+            <Link href={section.link} target='_blank' rel='noopener'>
+              @{section.place}
+            </Link>
           </Typography>
+
           <Typography
             sx={{
               marginLeft: '32px',
