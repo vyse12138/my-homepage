@@ -68,8 +68,9 @@ export default function App({ Component, pageProps, router }: AppProps) {
     import('../bg').then(() => {
       setLoading(false)
     })
-    // update language and theme on load
-    setEnglish(!/^zh\b/.test(navigator.language))
+
+    // update language and theme on load, currently disabled
+    // setEnglish(!/^zh\b/.test(navigator.language))
   }, [])
 
   return (

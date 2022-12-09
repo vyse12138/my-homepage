@@ -26,7 +26,7 @@ const contents = {
   english: {
     intro: {
       title: "Hi there, I'm Yulei",
-      role: 'Student / Software Engineer / Frontend Developer',
+      role: 'Software Engineer / Frontend Engineer',
       bio: {
         title: 'Bio',
         sections: [
@@ -113,7 +113,8 @@ const contents = {
     nav: {
       name: 'Yulei',
       project: 'Projects',
-      post: 'Posts'
+      post: 'Posts',
+      lang: 'EN'
     },
     project: {
       title: 'Projects',
@@ -188,6 +189,14 @@ const contents = {
       more: false,
       sections: [
         {
+          id: 'mc',
+          img: mc,
+          title: 'Minecraft Clone',
+          description:
+            'Going through the process of building a Minecraft clone. Including the basic setup, terrain generation, chunk loading, movement, and more.',
+          preview: 'https://juejin.cn/post/7088875551704350756'
+        },
+        {
           id: 'algo',
           img: algo,
           title: 'Algorithms',
@@ -225,7 +234,7 @@ const contents = {
   chinese: {
     intro: {
       title: '嗨, 这里是小诸',
-      role: '学生 / 软件工程师 / 前端工程师',
+      role: '软件工程师 / 前端工程师',
       bio: {
         title: '简介',
         sections: [
@@ -312,7 +321,8 @@ const contents = {
     nav: {
       name: '小诸',
       project: '项目',
-      post: '文章'
+      post: '文章',
+      lang: 'CN'
     },
     project: {
       title: '项目',
@@ -385,6 +395,13 @@ const contents = {
       title: '文章',
       more: true,
       sections: [
+        {
+          id: 'mc',
+          img: mc,
+          title: '我的世界网页版',
+          description: '开发我的世界网页版时遇到的一些技术难点, 以及解决方案. ',
+          preview: 'https://juejin.cn/post/7088875551704350756'
+        },
         {
           id: 'algo',
           img: algo,

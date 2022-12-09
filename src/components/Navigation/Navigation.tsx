@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { GlobalContext } from '../../pages/_app'
 import { useTheme } from '@mui/material/styles'
 import { Translate, DarkMode, LightMode } from '@mui/icons-material'
-import { Box, IconButton, Typography } from '@mui/material'
+import { Box, IconButton, Button, Typography } from '@mui/material'
 import { alpha } from '@mui/material/styles'
 import AnimateWrapper from '../../components/AnimateWrapper'
 import Logo from './src/Logo'
@@ -146,16 +146,21 @@ export default function Navigation() {
               </Link>
             </Box>
 
-            <IconButton
+            <Button
               onClick={globalContext.toggleLanguage}
               sx={{
                 marginLeft: 'auto',
-                color: 'inherit'
+                color: 'inherit',
+                '&:hover': {
+                  textDecoration: 'underline'
+                }
               }}
               aria-label='change language'
+              startIcon={<Translate />}
             >
-              <Translate />
-            </IconButton>
+              {contents.lang}
+            </Button>
+
             <IconButton
               id='theme'
               onClick={globalContext.toggleTheme}
@@ -164,7 +169,11 @@ export default function Navigation() {
               }}
               aria-label='change theme'
             >
-              {theme.palette.mode === 'dark' ? <DarkMode /> : <LightMode />}
+              {theme.palette.mode === 'dark' ? (
+                <DarkMode sx={{ width: 20 }} />
+              ) : (
+                <LightMode sx={{ width: 20 }} />
+              )}
             </IconButton>
           </Box>
         </AnimateWrapper>
