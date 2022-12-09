@@ -43,21 +43,24 @@ const contents = {
             location: 'Shanghai, China',
             role: 'Software Engineer (Intern)',
             place: 'Naive Systems',
-            link: 'https://naivesystems.com/'
+            link: 'https://naivesystems.com/',
+            tech: 'TypeScript + Node.js + React + Tailwind CSS'
           },
           {
             date: '2021.07 - 2022.07',
             location: 'Melbourne, Australia',
             role: 'Full Stack Developer (Intern)',
             place: 'Movember',
-            link: 'https://movember.com/'
+            link: 'https://movember.com/',
+            tech: 'TypeScript + React + Next.js + Node.js + AWS + Jest'
           },
           {
             date: '2020.12 - 2021.03',
             location: 'Melbourne, Australia',
             role: 'Frontend Developer (Intern)',
             place: 'Agriview',
-            link: 'https://www.agriview.com.au/'
+            link: 'https://www.agriview.com.au/',
+            tech: 'JavaScript + Vue 3 + C#'
           }
         ]
       },
@@ -237,23 +240,26 @@ const contents = {
           {
             date: '2022.08 - 2022.12',
             location: '中国 - 上海',
-            role: '软件工程师(实习)',
-            place: 'Naive Systems',
-            link: 'https://naivesystems.com/'
+            role: '软件开发实习生',
+            place: '那一科技',
+            link: 'https://naivesystems.com/',
+            tech: 'TypeScript + Node.js + React + Tailwind CSS'
           },
           {
             date: '2021.07 - 2022.07',
             location: '澳大利亚 - 墨尔本',
-            role: '全栈工程师(实习)',
+            role: '全栈开发实习生',
             place: 'Movember',
-            link: 'https://movember.com/'
+            link: 'https://movember.com/',
+            tech: 'TypeScript + React + Next.js + Node.js + AWS + Jest'
           },
           {
             date: '2020.12 - 2021.03',
             location: '澳大利亚 - 墨尔本',
-            role: '前端工程师(实习)',
+            role: '前端开发实习生',
             place: 'Agriview',
-            link: 'https://www.agriview.com.au/'
+            link: 'https://www.agriview.com.au/',
+            tech: 'JavaScript + Vue 3 + C#'
           }
         ]
       },

@@ -3,16 +3,22 @@ import { GlobalContext } from '../../pages/_app'
 import {
   Box,
   Typography,
-  Table,
-  TableBody,
-  TableRow,
-  TableCell,
+  // Table,
+  // TableBody,
+  // TableRow,
+  // TableCell,
   useTheme,
   Link
 } from '@mui/material'
 import Contact from './src/Contact'
 import Interest from './src/Interest'
-import { Favorite, LocationOn, Work, Apartment } from '@mui/icons-material'
+import {
+  Favorite,
+  LocationOn,
+  Work,
+  Apartment,
+  Lightbulb
+} from '@mui/icons-material'
 import Tech from './src/Tech'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -112,6 +118,18 @@ export default function Intro() {
           >
             <Work sx={{ height: '18px', marginRight: '8px' }} />
             <b>{section.role}</b>
+          </Typography>
+
+          <Typography
+            sx={{
+              marginLeft: '32px',
+              marginBottom: '4px',
+              display: 'flex',
+              alignItems: 'center'
+            }}
+          >
+            <Lightbulb sx={{ height: '18px', marginRight: '8px' }} />
+            {section.tech ? section.tech : ''}
           </Typography>
 
           <Typography
