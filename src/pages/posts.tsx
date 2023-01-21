@@ -72,6 +72,7 @@ export default function Posts() {
                 title={post.title}
                 description={post.description}
                 preview={post.preview}
+                read={contents.read}
               />
             ))}
           </Box>

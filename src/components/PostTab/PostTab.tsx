@@ -8,12 +8,14 @@ export default function PostTab({
   img,
   title,
   description,
-  preview
+  preview,
+  read
 }: {
   img: StaticImageData
   title: string
   description: string
   preview: string
+  read: string
 }) {
   const theme = useTheme()
   const [info, setInfo] = useState(false)
@@ -70,7 +72,7 @@ export default function PostTab({
                       e.stopPropagation()
                     }}
                   >
-                    <MenuBook sx={{ paddingRight: '5px' }} /> Read it here
+                    <MenuBook sx={{ paddingRight: '5px' }} /> {read}
                   </Link>
                 )}
               </Box>

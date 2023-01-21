@@ -10,6 +10,7 @@ import {
 } from '@mui/icons-material'
 
 import mc from '../public/images/mc.png'
+import year2022 from '../public/images/year2022.jpg'
 import okcode from '../public/images/okcode.png'
 import cocktail from '../public/images/cocktail.png'
 import home from '../public/images/home.jpg'
@@ -195,7 +196,16 @@ const contents = {
     post: {
       title: 'Posts',
       more: false,
+      read: 'Read it here',
       sections: [
+        {
+          id: '2022',
+          img: year2022,
+          title: '2022 End of Year Review',
+          description:
+            'My 2022 end of year review, from a student to a software engineer.',
+          preview: 'https://juejin.cn/post/7181364546215346237'
+        },
         {
           id: 'mc',
           img: mc,
@@ -410,7 +420,15 @@ const contents = {
     post: {
       title: '文章',
       more: true,
+      read: '去看看',
       sections: [
+        {
+          id: '2022',
+          img: year2022,
+          title: '2022 年终总结',
+          description: '我的 2022 年终总结, 从学校到职场的转变.',
+          preview: 'https://juejin.cn/post/7181364546215346237'
+        },
         {
           id: 'mc',
           img: mc,
