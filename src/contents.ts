@@ -30,7 +30,7 @@ const contents = {
       bio: {
         title: 'Bio',
         sections: [
-          "I'm a Software Engineer Intern at a startup in Shanghai.",
+          "I'm a Frontend Engineer at Ant Group.",
           'I graduated from Swinburne University of Technology with an Honours Bachelor of Software Engineering in 2022.',
           'My passion for software lies with dreaming up ideas and making them come true with elegant interface and great code quality.'
         ]
@@ -38,6 +38,14 @@ const contents = {
       work: {
         title: 'Professional Experience',
         sections: [
+          {
+            date: '2023.01 - Present',
+            location: 'Shanghai, China',
+            role: 'Frontend Engineer',
+            place: 'Ant Group',
+            link: 'https://www.antgroup.com/en/',
+            tech: 'TypeScript + React + Node.js'
+          },
           {
             date: '2022.08 - 2022.12',
             location: 'Shanghai, China',
@@ -238,7 +246,7 @@ const contents = {
       bio: {
         title: '简介',
         sections: [
-          '我现在就职于一家位于上海的创业公司, 担任软件开发实习生一职, 主要负责前端开发.',
+          '我现在就职于蚂蚁集团, 担任前端工程师一职, 主要负责中台业务.',
           '我在 2022 年毕业于斯威本科技大学, 取得了软件工程专业的荣誉学士学位.',
           '我对软件开发的热情在于用的代码去解决遇到的各种问题, 或者去实现自己的各种天马行空的想法. 并且希望在开发和维护代码的过程中, 我也能够学习到新的技术知识.'
         ]
@@ -246,6 +254,14 @@ const contents = {
       work: {
         title: '工作经历',
         sections: [
+          {
+            date: '2023.01 - 至今',
+            location: '中国 - 上海',
+            role: '前端工程师',
+            place: '蚂蚁集团',
+            link: 'https://www.antgroup.com/',
+            tech: 'TypeScript + React + Node.js'
+          },
           {
             date: '2022.08 - 2022.12',
             location: '中国 - 上海',
