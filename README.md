@@ -1,6 +1,6 @@
 # my-homepage
 
-My homepage at [yulei.me](https://yulei.me)
+My homepage
 
 ## Tech Stack
 
